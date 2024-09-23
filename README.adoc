@@ -27,7 +27,7 @@ readme's instructions.
 === Examples
 
 // examples: START
-Number of Examples: 54 (0 deprecated)
+Number of Examples: 55 (0 deprecated)
 
 [width="100%",cols="4,2,4",options="header"]
 |===
@@ -36,6 +36,8 @@ Number of Examples: 54 (0 deprecated)
 | link:amqp-salesforce/README.adoc[Amqp Salesforce] (amqp-salesforce) |  | AMQP message sending is created as contacts in Salesforce
 
 | link:health-checks/readme.adoc[Health Checks] (health-checks) |  | 
+
+| link:endpointdsl/readme.adoc[Endpointdsl] (endpointdsl) | Beginner | Using type-safe Endpoint DSL
 
 | link:spring-boot-jta-jpa-autoconfigure/readme.adoc[Spring Boot Jta Jpa Autoconfigure] (spring-boot-jta-jpa-autoconfigure) | Advanced | An example showing JTA with Spring Boot Autoconfiguration
 
