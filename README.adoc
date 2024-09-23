@@ -27,7 +27,7 @@ readme's instructions.
 === Examples
 
 // examples: START
-Number of Examples: 51 (0 deprecated)
+Number of Examples: 52 (0 deprecated)
 
 [width="100%",cols="4,2,4",options="header"]
 |===
@@ -81,13 +81,13 @@ Number of Examples: 51 (0 deprecated)
 
 | link:master/readme.adoc[Master] (master) | Clustering | An example showing how to work with Camel's Master component and Spring Boot
 
+| link:rest-cxf-opentelemetry/README.adoc[Rest Cxf Opentelemetry] (rest-cxf-opentelemetry) | CXF | An example showing Camel REST using CXF and OpenTelemetry with Spring Boot
+
 | link:soap-cxf/README.adoc[Soap Cxf] (soap-cxf) | CXF | An example showing the Camel SOAP CXF
 
 | link:arangodb/README.adoc[Arangodb] (arangodb) | Database | An example showing the Camel ArangoDb component with Spring Boot
 
 | link:resilience4j/README.adoc[Resilience4j] (resilience4j) | EIP | An example showing how to use Resilience4j EIP as circuit breaker in Camel routes
-
-| link:rest-cxf-opentelemetry/README.adoc[Rest Cxf Opentelemetry] (rest-cxf-opentelemetry) | CXF | An example showing Camel REST using CXF and OpenTelemetry with Spring Boot
 
 | link:saga/readme.adoc[Saga] (saga) | EIP | This example shows how to work with a simple Apache Camel application using Spring Boot and Narayana LRA Coordinator to manage distributed actions implementing SAGA pattern
 
@@ -120,6 +120,8 @@ Number of Examples: 51 (0 deprecated)
 | link:activemq/readme.adoc[Activemq] (activemq) | Messaging | An example showing how to work with Camel, ActiveMQ openwire and Spring Boot
 
 | link:amqp/readme.adoc[Amqp] (amqp) | Messaging | An example showing how to work with Camel, ActiveMQ Amqp and Spring Boot
+
+| link:artemis/readme.adoc[Artemis] (artemis) | Messaging | An example showing how to work with Camel, ActiveMQ Artemis and Spring Boot
 
 | link:kafka-avro/README.adoc[Kafka Avro] (kafka-avro) | Messaging | An example for Kafka avro
 
