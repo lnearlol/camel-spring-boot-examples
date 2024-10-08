@@ -27,7 +27,7 @@ readme's instructions.
 === Examples
 
 // examples: START
-Number of Examples: 59 (0 deprecated)
+Number of Examples: 60 (0 deprecated)
 
 [width="100%",cols="4,2,4",options="header"]
 |===
@@ -96,6 +96,8 @@ Number of Examples: 59 (0 deprecated)
 | link:soap-cxf/README.adoc[Soap Cxf] (soap-cxf) | CXF | An example showing the Camel SOAP CXF
 
 | link:arangodb/README.adoc[Arangodb] (arangodb) | Database | An example showing the Camel ArangoDb component with Spring Boot
+
+| link:multi-datasource-2pc/readme.adoc[Multi Datasource 2pc] (multi-datasource-2pc) | Database | An example showing how to work with Camel and Spring Boot using multiple pooled datasources with two-phase commit
 
 | link:resilience4j/README.adoc[Resilience4j] (resilience4j) | EIP | An example showing how to use Resilience4j EIP as circuit breaker in Camel routes
 
