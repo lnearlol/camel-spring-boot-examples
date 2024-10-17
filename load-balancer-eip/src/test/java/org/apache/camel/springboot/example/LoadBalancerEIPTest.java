@@ -17,8 +17,6 @@
 package org.apache.camel.springboot.example;
 
 import org.apache.camel.CamelContext;
-import org.apache.camel.ConsumerTemplate;
-import org.apache.camel.EndpointInject;
 import org.apache.camel.ProducerTemplate;
 import org.apache.camel.component.mock.MockEndpoint;
 import org.apache.camel.test.spring.junit5.CamelSpringBootTest;
@@ -26,6 +24,10 @@ import org.apache.camel.test.spring.junit5.MockEndpoints;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.boot.test.web.server.LocalServerPort;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
 
 import java.util.List;
 import java.util.stream.IntStream;
@@ -33,21 +35,18 @@ import java.util.stream.IntStream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @CamelSpringBootTest
-@SpringBootTest(classes = Application.class)
+@SpringBootTest(classes = Application.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @MockEndpoints("direct:*")
 public class LoadBalancerEIPTest {
 
     @Autowired
     private CamelContext camelContext;
 
-    @Autowired
-    private ProducerTemplate producerTemplate;
+    @LocalServerPort
+    private int port;
 
     @Autowired
-    private ConsumerTemplate consumerTemplate;
-
-    @EndpointInject("mock:direct:topic1")
-    private MockEndpoint mockCamel;
+    private TestRestTemplate restTemplate;
 
     @Test
     public void roundRobinTest() throws Exception {
@@ -56,14 +55,14 @@ public class LoadBalancerEIPTest {
 
         final MockEndpoint endpoint1 = camelContext.getEndpoint("mock:direct:roundrobin1", MockEndpoint.class);
         endpoint1.setExpectedCount(messages / 2);
-        endpoint1.expectedBodiesReceived(bodies.stream().filter(i -> i % 2 == 0).toArray());
+        endpoint1.expectedBodiesReceived(bodies.stream().filter(i -> i % 2 == 0).map(String::valueOf).toArray());
 
         final MockEndpoint endpoint2 = camelContext.getEndpoint("mock:direct:roundrobin2", MockEndpoint.class);
         endpoint2.setExpectedCount(messages / 2);
-        endpoint2.expectedBodiesReceived(bodies.stream().filter(i -> i % 2 == 1).toArray());
+        endpoint2.expectedBodiesReceived(bodies.stream().filter(i -> i % 2 == 1).map(String::valueOf).toArray());
 
         for (int i = 0; i < messages; i++) {
-            producerTemplate.sendBody("direct:loadbalancer-round-robin", i);
+            restTemplate.postForLocation("http://localhost:" + port + "/loadbalancer/round-robin/", i);
         }
 
         endpoint1.assertIsSatisfied();
@@ -78,7 +77,7 @@ public class LoadBalancerEIPTest {
         final MockEndpoint endpoint2 = camelContext.getEndpoint("mock:direct:random2", MockEndpoint.class);
 
         for (int i = 0; i < messages; i++) {
-            producerTemplate.sendBody("direct:loadbalancer-random", i);
+            restTemplate.postForLocation("http://localhost:" + port + "/loadbalancer/random/", i);
         }
 
         assertEquals(messages, endpoint1.getReceivedCounter() + endpoint2.getReceivedCounter());
@@ -93,11 +92,17 @@ public class LoadBalancerEIPTest {
         endpoint2.setExpectedCount(3);
         endpoint2.expectedBodiesReceived("B", "C", "D");
 
-        producerTemplate.sendBodyAndHeader("direct:loadbalancer-sticky", "A", "correlation-key", "vowel");
-        producerTemplate.sendBodyAndHeader("direct:loadbalancer-sticky", "B", "correlation-key", "consonant");
-        producerTemplate.sendBodyAndHeader("direct:loadbalancer-sticky", "C", "correlation-key", "consonant");
-        producerTemplate.sendBodyAndHeader("direct:loadbalancer-sticky", "D", "correlation-key", "consonant");
-        producerTemplate.sendBodyAndHeader("direct:loadbalancer-sticky", "E", "correlation-key", "vowel");
+        HttpHeaders vowelHeader = new HttpHeaders();
+        vowelHeader.set("correlation-key", "vowel");
+
+        HttpHeaders consonantHeader = new HttpHeaders();
+        consonantHeader.set("correlation-key", "consonant");
+
+        restTemplate.postForLocation("http://localhost:" + port + "/loadbalancer/sticky/", new HttpEntity<>("A", vowelHeader));
+        restTemplate.postForLocation("http://localhost:" + port + "/loadbalancer/sticky/", new HttpEntity<>("B", consonantHeader));
+        restTemplate.postForLocation("http://localhost:" + port + "/loadbalancer/sticky/", new HttpEntity<>("C", consonantHeader));
+        restTemplate.postForLocation("http://localhost:" + port + "/loadbalancer/sticky/", new HttpEntity<>("D", consonantHeader));
+        restTemplate.postForLocation("http://localhost:" + port + "/loadbalancer/sticky/", new HttpEntity<>("E", vowelHeader));
 
         endpoint1.assertIsSatisfied();
         endpoint2.assertIsSatisfied();
@@ -109,13 +114,13 @@ public class LoadBalancerEIPTest {
 
         final MockEndpoint endpoint1 = camelContext.getEndpoint("mock:direct:topic1", MockEndpoint.class);
         endpoint1.setExpectedCount(messages);
-        endpoint1.expectedBodiesReceived(IntStream.range(0, messages).boxed().toArray());
+        endpoint1.expectedBodiesReceived(IntStream.range(0, messages).boxed().map(String::valueOf).toArray());
         final MockEndpoint endpoint2 = camelContext.getEndpoint("mock:direct:topic2", MockEndpoint.class);
         endpoint2.setExpectedCount(messages);
-        endpoint2.expectedBodiesReceived(IntStream.range(0, messages).boxed().toArray());
+        endpoint2.expectedBodiesReceived(IntStream.range(0, messages).boxed().map(String::valueOf).toArray());
 
         for (int i = 0; i < messages; i++) {
-            producerTemplate.sendBody("direct:loadbalancer-topic", i);
+            restTemplate.postForLocation("http://localhost:" + port + "/loadbalancer/topic/", i);
         }
 
         endpoint1.assertIsSatisfied();
@@ -129,7 +134,8 @@ public class LoadBalancerEIPTest {
         final MockEndpoint endpoint2 = camelContext.getEndpoint("mock:direct:failover2", MockEndpoint.class);
         endpoint1.setExpectedCount(1);
 
-        producerTemplate.sendBody("direct:loadbalancer-failover", "A");
+        restTemplate.postForLocation("http://localhost:" + port + "/loadbalancer/failover/", "A");
+
         endpoint1.assertIsSatisfied();
         endpoint2.assertIsSatisfied();
     }
@@ -143,7 +149,7 @@ public class LoadBalancerEIPTest {
         endpoint2.setExpectedCount(2);
 
         for (int i = 0; i < messages; i++) {
-            producerTemplate.sendBody("direct:loadbalancer-weighted-round-robin", i);
+            restTemplate.postForLocation("http://localhost:" + port + "/loadbalancer/weighted/", i);
         }
         endpoint1.assertIsSatisfied();
         endpoint2.assertIsSatisfied();
@@ -159,7 +165,7 @@ public class LoadBalancerEIPTest {
         endpoint2.expectedBodiesReceived("B", "C", "D");
 
         for (String s : List.of("A", "B", "C", "D", "E")) {
-            producerTemplate.sendBody("direct:loadbalancer-custom", s);
+            restTemplate.postForLocation("http://localhost:" + port + "/loadbalancer/custom/", s);
         }
 
         endpoint1.assertIsSatisfied();
