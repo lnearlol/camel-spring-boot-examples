@@ -24,23 +24,24 @@ import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.boot.test.web.server.LocalServerPort;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @CamelSpringBootTest
-@SpringBootTest(classes = Application.class)
+@SpringBootTest(classes = Application.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class CustomConverterRuntimeTest {
 
 	@Autowired
 	private CamelContext context;
 
-	private ProducerTemplate producerTemplate;
+	@LocalServerPort
+	private int port;
 
-	@BeforeEach
-	public void setup() {
-		producerTemplate = context.createProducerTemplate();
-	}
+	@Autowired
+	private TestRestTemplate restTemplate;
 
 	@Test
 	public void testCustomConverter() {
@@ -49,13 +50,10 @@ public class CustomConverterRuntimeTest {
 		context.getTypeConverterRegistry().addTypeConverters(new CustomRuntimeConverter());
 
 		byte[] data = "John Doe 22".getBytes();
-		final Person abc = producerTemplate.requestBody("direct:convert1", data, Person.class);
+		final String response = restTemplate.postForObject("http://localhost:" + port + "/api/convert", data, String.class);
 
-		assertNotNull(abc);
-
-		assertEquals("John", abc.getFirstName());
-		assertEquals("Doe", abc.getLastName());
-		assertEquals(22, abc.getAge());
+		final Person expected = new Person("John", "Doe", 22);
+		assertEquals(expected.toString(), response);
 	}
 
 }
