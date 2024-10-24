@@ -19,8 +19,7 @@ package org.apache.camel.example.spring.boot.monitoring;
 import io.micrometer.core.instrument.Clock;
 import io.micrometer.prometheusmetrics.PrometheusConfig;
 import io.micrometer.prometheusmetrics.PrometheusMeterRegistry;
-//import io.prometheus.client.CollectorRegistry;
-//import io.prometheus.jmx.BuildInfoCollector;
+import io.prometheus.jmx.BuildInfoMetrics;
 import io.prometheus.jmx.JmxCollector;
 import io.prometheus.metrics.model.registry.PrometheusRegistry;
 import org.apache.camel.CamelContext;
@@ -60,8 +59,8 @@ public class Application {
 
         InputStream resource = new ClassPathResource("config/prometheus_exporter_config.yml").getInputStream();
 
-        //new JmxCollector(resource).register(prometheusRegistry);
-        //new BuildInfoCollector().register(prometheusRegistry);
+        new JmxCollector(resource).register(prometheusRegistry);
+        new BuildInfoMetrics().register(prometheusRegistry);
         return new PrometheusMeterRegistry(prometheusConfig, prometheusRegistry, clock);
     }
 
