@@ -1,6 +1,10 @@
-== Camel Health Checks and Spring Boot
+== Camel Health Checks - Spring Boot Example
+
+=== Abstract
 
 This example shows how to work with a simple Apache Camel application using Spring Boot.
+
+=== Introduction
 
 NOTE: Some routes fail intentionally to have health check monitor their failures
 

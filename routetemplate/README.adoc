@@ -1,7 +1,11 @@
-== Camel Example Spring Boot Route Template
+== Route Template - Spring Boot example
+
+=== Abstract
 
 This examples shows how to use Route Templates (parameterized routes) to specify a skeleton route
 which can be used for creating and adding new routes via parameters.
+
+=== Introduction
 
 We have prepared the example with the route template in both XML and Java DSL
 

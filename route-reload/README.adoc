@@ -1,7 +1,11 @@
-== Route Reload Example
+== Route Reload - Spring Boot example
+
+=== Abstract
 
 This example shows how to use https://camel.apache.org/manual/route-reload.html[route reloading]. This feature is watching a directory folder
 for file changes, and then automatic trigger reloads the running routes in the Camel application.
+
+=== Introduction
 
 The example generates messages using timer trigger, writes them to standard output.
 

@@ -1,6 +1,10 @@
-== Camel Supervising Route Controller Example Spring Boot
+== Supervising Route Controller - Spring Boot example
+
+=== Abstract
 
 This example shows how to work with a simple Apache Camel application using Spring Boot and a Supervising Route Controller.
+
+=== Introduction
 
 === How to run
 

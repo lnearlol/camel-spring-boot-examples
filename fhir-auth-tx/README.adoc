@@ -1,9 +1,10 @@
-:experimental:
-== FHIR Authorization and Transaction Example - Spring Boot
+== FHIR Authorization and Transaction - Spring Boot Example
 
-=== Introduction
+=== Abstract
 
 This is an example application of the `camel-fhir` component. We'll be using `camel-spring-boot` as well for an easy setup.
+
+=== Introduction
 
 The Camel route is located in the `MyCamelRouter` class.
 

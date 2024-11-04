@@ -1,7 +1,10 @@
-== Camel with Actuator - Mappings, Metrics and Shutdown example
+==  Actuator - Spring Boot Example
 
-This example shows how you can query some of Spring Boot Actuator options from your
-Camel routes.
+=== Abstract
+
+This example shows how you can query some of Spring Boot Actuator options from your  Camel routes.
+
+=== Introduction
 
 === How to run
 

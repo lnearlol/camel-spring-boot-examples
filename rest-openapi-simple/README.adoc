@@ -1,9 +1,14 @@
-== Camel Rest OpenApi example
+== Camel Rest OpenApi - Spring Boot example
+
+=== Abstract
 
 This example shows how to call a REST service defined using OpenAPI
 specification with the help of Camel Rest OpenApi component.
 
-== Trying out the example on your local machine
+=== Introduction
+
+
+=== Trying out the example on your local machine
 
 Start the server providing the OpenAPI specification with:
 

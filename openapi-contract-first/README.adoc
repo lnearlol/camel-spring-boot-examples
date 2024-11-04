@@ -1,6 +1,10 @@
-== Camel Example OpenAPI Contract First
+== OpenAPI Contract First - Spring Boot Example
+
+=== Abstract
 
 This example uses Camel to expose REST APIs from an existing OpenAPI specification (contract first).
+
+=== Introduction
 
 From the contract we generate Java POJO classes (using maven plugin, see `pom.xml`).
 

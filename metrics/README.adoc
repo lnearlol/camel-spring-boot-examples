@@ -1,30 +1,13 @@
-== Camel Spring Boot Metrics Example
+== Metrics - Spring Boot Example
 
-=== Introduction
+=== Abstract
 
 This example sends Camel route metrics to Graphite from a Spring Boot
 app.
 
-Please read *Configuration* first
+=== Introduction
 
-=== Build
 
-You will need to compile this example first:
-
-....
-mvn install
-....
-
-=== Run
-
-To run the example type
-
-....
-java -jar target/camel-example-spring-boot-metrics.jar
-....
-
-You will see logging from the 'Fast' and 'Slow' routes, and metrics
-will be sent to Graphite (or nc) every 5 seconds.
 
 === Configuration
 
@@ -47,6 +30,25 @@ If you can't be bothered to set up a Graphite server right now, you can
 simulate it by running `+nc -ul 2003+` on Linux. If you don't have
 `+nc+`, use `+yum search netcat+` to find a suitable package to install
 (e.g. nmap-ncat.x86_64).
+
+=== Build
+
+You will need to compile this example first:
+
+....
+mvn install
+....
+
+=== Run
+
+To run the example type
+
+....
+java -jar target/camel-example-spring-boot-metrics.jar
+....
+
+You will see logging from the 'Fast' and 'Slow' routes, and metrics
+will be sent to Graphite (or nc) every 5 seconds.
 
 === Help and contributions
 

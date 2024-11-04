@@ -1,6 +1,10 @@
-== Camel Example RabbitMQ
+== RabbitMQ - Spring Boot example
+
+=== Abstract
 
 This example shows how to work with a simple Apache Camel application that routes message to RabbitMQ.
+
+=== Introduction
 
 The example generates messages using timer trigger, routes them via RabbitMQ and logs to message.
 

@@ -1,8 +1,12 @@
-== Spring Boot Example with HTTP and SSL
+== HTTP and SSL - Spring Boot Example
+
+=== Abstract
+
+This example shows how to configure SSL in different scenarios.
 
 === Introduction
 
-This example shows how to configure SSL in different scenarios:
+Scenarios:
 
 1. one way SSL, the server exposes REST API using SSL and the client trusts the server certificate. The SSL server configuration is managed by Spring Boot and the Camel inherit it, the SSL client configuration is managed by Camel in HTTP component
 2. two ways SSL, the server and the client check both certificates in a mutual trusted handshake

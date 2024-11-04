@@ -1,6 +1,12 @@
-== Camel Clustered Route Controller Example Spring Boot
+== Master component clustered route controller - Spring Boot Example
+
+=== Abstract
 
 This example shows how to work with a simple Apache Camel application using Spring Boot and a Master component.
+
+=== Introduction
+
+
 
 === How to run in local
 

@@ -1,8 +1,11 @@
-== Spring Boot Example with Quartz and Log
+== Quartz and Log - Spring Boot example
+
+=== Abstract
+
+This example demonstrates how to use Quartz Starter with Log Starter.
 
 === Introduction
 
-This example demonstrates how to use Quartz Starter with Log Starter.
 
 === Build
 

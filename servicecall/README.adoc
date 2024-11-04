@@ -1,6 +1,10 @@
-== Spring Boot and ServiceCall EIP Example
+== ServiceCall EIP - Spring Boot example
+
+=== Abstract
 
 This example show how to use Camel with ServiceCall EIP with spring-boot and consul.
+
+=== Introduction
 
 This example includes two maven modules:
 

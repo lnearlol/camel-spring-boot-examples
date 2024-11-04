@@ -1,6 +1,10 @@
-== Camel Example Spring Boot
+== Type converter - Camel Spring Boot Example
+
+=== Abstract
 
 This example shows two options creating a custom Type Converter with Apache Camel application using Spring Boot.
+
+=== Introduction
 
 Option 1 (Camel 2.x) - Converter added to the registry and loaded at the runtime : CustomConverterRuntimeTest and CustomRuntimeConverter.
 

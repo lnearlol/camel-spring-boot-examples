@@ -1,6 +1,10 @@
-== Camel Example Reactive Streams
+== Reactive Streams - Spring Boot example
+
+=== Abstract
 
 This example shows some possible usages of the Camel reactive streams component.
+
+=== Introduction
 
 The following sample routes are started together in a spring-boot application (all routes use `reactor-core` as external reactive framework):
 

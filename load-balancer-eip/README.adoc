@@ -1,4 +1,6 @@
-== Camel Example Spring Boot
+== Load Balancer EIP - Spring Boot Example
+
+=== Abstract
 
 This example shows several examples of Load Balancer EIP with Apache Camel application using Spring Boot.
 

@@ -1,8 +1,10 @@
-== Camel Example Kamelet Chuck Norris
+== Kamelet Chuck Norris - Spring Boot Example
 
-=== Introduction
+=== Abstract
 
 This example shows how you can build a simple Kamelet and use with your Camel applications.
+
+=== Introduction
 
 The kamelet is created as a YAML file in the `src/main/resources/kamelets` directory.
 We have developed a Chuck Norris Kamelet that periodically gets a joke from the Chuck Norris internet database.

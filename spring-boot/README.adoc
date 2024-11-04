@@ -1,6 +1,10 @@
-== Camel Example Spring Boot
+== Camel application - Spring Boot example
+
+=== Abstract
 
 This example shows how to work with a simple Apache Camel application using Spring Boot.
+
+=== Introduction
 
 The example generates messages using timer trigger, writes them to standard output.
 

@@ -1,6 +1,12 @@
-== Camel Example Spring JDBC
+== JDBC - Spring Boot example
+
+=== Abstract
 
 This example shows how `transacted()` routes create a jdbc local transaction integrating Camel and Spring Transaction
+
+=== Introduction
+
+
 
 === How to run
 Run the database container

@@ -1,8 +1,10 @@
-== Camel Kafka example
+== Camel Kafka - Spring Boot Example
 
-=== Introduction
+=== Abstract
 
 An example which shows how to integrate Camel with Kafka offsetRepository to use in order to locally store the offset of each partition of the topic
+
+=== Introduction
 
 This project consists of the following examples:
 

@@ -1,8 +1,10 @@
-== Spring Boot and SAGA EIP Example
+== SAGA EIP Example - Spring Boot example
 
-This example shows how to work with Apache Camel Saga using Spring Boot and Narayana LRA Coordinator to manage long running actions
+=== Abstract
 
-=== How it works
+This example shows how to work with Apache Camel Saga using Spring Boot and Narayana LRA Coordinator to manage long-running actions.
+
+=== Introduction
 
 There are 4 services as participants of the Saga:
 

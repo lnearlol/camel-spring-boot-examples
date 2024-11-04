@@ -1,6 +1,12 @@
-== Camel Example Spring Boot and ActiveMQ Artemis
+== ActiveMQ Artemis - Spring Boot Example
+
+=== Abstract
 
 This example shows how to work with a simple Apache Camel application using Spring Boot and Apache ActiveMQ Artemis.
+
+=== Introduction
+
+
 
 === How to run the example
 

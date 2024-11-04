@@ -1,6 +1,10 @@
-== Camel Example Spring Boot and ActiveMQ AMQP
+== ActiveMQ AMQP - Spring Boot Example
+
+=== Abstract
 
 This example shows how to work with a simple Apache Camel application using Spring Boot and Apache ActiveMQ through the AMQP protocol.
+
+=== Introduction
 
 == Trying out the example on your local machine
 

@@ -1,9 +1,13 @@
-= Camel Monitoring with Actuator - Micrometer, Prometheus and Grafana example
+= Micrometer, Prometheus and Grafana - Spring Boot Example
 :autofit-option:
 
-image::images/header.png[]
+=== Abstract
 
 This example shows how you can monitor Camel on Spring Boot applications using Prometheus and Grafana.
+
+=== Introduction
+
+image::images/header.png[]
 
 === Adding Prometheus support
 

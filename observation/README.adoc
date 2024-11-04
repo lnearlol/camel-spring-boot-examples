@@ -1,9 +1,11 @@
-== Micrometer Observation Example
+== Micrometer Observation - Spring Boot Example
 
-=== Introduction
+=== Abstract
 
 This example shows how to use Camel with Micrometer Observation to create observations for
 incoming and outgoing Camel messages.
+
+=== Introduction
 
 For Metrics we are using Micrometer Core, for Tracing we're using Micrometer Tracing with OpenTelemetry.
 

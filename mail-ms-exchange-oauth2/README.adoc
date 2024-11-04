@@ -1,13 +1,16 @@
-== Camel Spring Boot Microsoft Exchange IMAP Oauth2 Authentication
+== Microsoft Exchange IMAP Oauth2 Authentication - Spring Boot Example
+
+=== Abstract
 
 This is an example that shows how to use Camel on Spring Boot to connect with
 IMAP protocol and access email data for Office 365 users using OAuth2 authentication.
 
+=== Introduction
+
 The application will use the client credentials grant flow to get the access token
 and use it to authenticate IMAP connections.
 
-
-=== Prerequisite
+=== Prerequisites
 
 * To use OAuth, an application must be registered with Azure Active Directory.
 Follow the instructions listed in https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app[Register an application with the Microsoft identity platform] to register a new application.

@@ -1,8 +1,10 @@
-== Spring Boot Example with Camel exposing REST services using Apache CXF, collecting distributed tracing using OpenTelemetry
+== Apache CXF REST services - Spring Boot example
 
-=== Introduction
+=== Abstract
 
 This example illustrates how to use https://projects.spring.io/spring-boot/[Spring Boot] with http://camel.apache.org[Camel] and https://cxf.apache.org/[Apache CXF] implementing REST services using bottom-up approach.
+
+=== Introduction
 
 If you are using REST services directly from Camel and you want to use https://opentelemetry.io/[OpenTelemetry] please refer to link:../opentelemetry/README.adoc[the dedicated example]
 

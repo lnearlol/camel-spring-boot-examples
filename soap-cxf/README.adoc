@@ -1,6 +1,10 @@
-== Camel SOAP CXF example
+== Camel SOAP CXF - Spring Boot example
+
+=== Abstract
 
 This example shows how to serve a SOAP CXF service with the help of Camel SOAP CXF component.
+
+=== Introduction
 
 The example is a standalone Spring Boot application that expose SOAP services that let you interact with a list of contact, you can run it with:
 

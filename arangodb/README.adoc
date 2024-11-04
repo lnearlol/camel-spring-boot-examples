@@ -1,8 +1,12 @@
-== Spring Boot Example with ArangoDB
+== ArangoDB - Spring Boot Example
+
+=== Abstract
+
+This example demonstrates how you can use Camel-Arangodb Starter component.
 
 === Introduction
 
-This example demonstrates how you can use Camel-Arangodb Starter component. The example is really simple: put a document in the database and get the document with the same key.
+The example is really simple: put a document in the database and get the document with the same key.
 You'll need a running ArangoDB server to run this example.
 
 === Build

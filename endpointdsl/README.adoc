@@ -1,4 +1,6 @@
-== Camel Example Endpoint DSL
+== Endpoint DSL - Spring Boot Example
+
+=== Abstract
 
 This example shows how to work with the type-safe Endpoint DSL to build Camel routes
 in Java code where endpoints are configured using a chain of Java method calls,
