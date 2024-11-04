@@ -1,4 +1,4 @@
-== HTTP and SSL - Spring Boot Example
+== HTTP and SSL - Spring Boot example
 
 === Abstract
 

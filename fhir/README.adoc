@@ -1,4 +1,4 @@
-= FHIR - Spring Boot Example
+= FHIR - Spring Boot example
 
 === Abstract
 

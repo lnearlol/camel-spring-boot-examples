@@ -1,4 +1,4 @@
-== Platform HTTP / REST DSL - Spring Boot Example
+== Platform HTTP / REST DSL - Spring Boot example
 
 === Abstract
 

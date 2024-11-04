@@ -1,4 +1,4 @@
-== ActiveMQ - Spring Boot Example
+== ActiveMQ - Spring Boot example
 
 === Abstract
 

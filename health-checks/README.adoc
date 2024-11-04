@@ -1,4 +1,4 @@
-== Camel Health Checks - Spring Boot Example
+== Camel Health Checks - Spring Boot example
 
 === Abstract
 

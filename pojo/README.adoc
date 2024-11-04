@@ -1,4 +1,4 @@
-== POJO Routing - Spring Boot Example
+== POJO Routing - Spring Boot example
 
 === Abstract
 

@@ -1,4 +1,4 @@
-== ArangoDB - Spring Boot Example
+== ArangoDB - Spring Boot example
 
 === Abstract
 

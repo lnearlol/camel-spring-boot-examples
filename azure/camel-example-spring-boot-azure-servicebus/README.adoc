@@ -1,4 +1,4 @@
-== Azure Service Bus - Spring Boot Example
+== Azure Service Bus - Spring Boot example
 
 === Abstract
 

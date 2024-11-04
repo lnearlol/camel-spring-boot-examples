@@ -1,4 +1,4 @@
-== Load Balancer EIP - Spring Boot Example
+== Load Balancer EIP - Spring Boot example
 
 === Abstract
 

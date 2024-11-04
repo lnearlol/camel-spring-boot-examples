@@ -1,4 +1,4 @@
-== Infinispan - Spring Boot Example
+== Infinispan - Spring Boot example
 
 === Abstract
 

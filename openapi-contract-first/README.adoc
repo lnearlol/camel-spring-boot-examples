@@ -1,4 +1,4 @@
-== OpenAPI Contract First - Spring Boot Example
+== OpenAPI Contract First - Spring Boot example
 
 === Abstract
 

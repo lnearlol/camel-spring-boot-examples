@@ -1,4 +1,4 @@
-== Micrometer Observation - Spring Boot Example
+== Micrometer Observation - Spring Boot example
 
 === Abstract
 

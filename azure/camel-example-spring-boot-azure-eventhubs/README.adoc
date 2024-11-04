@@ -1,4 +1,4 @@
-== Azure Event Hubs - Spring Boot Example
+== Azure Event Hubs - Spring Boot example
 
 === Abstract
 

@@ -1,4 +1,4 @@
-==  Actuator - Spring Boot Example
+==  Actuator - Spring Boot example
 
 === Abstract
 

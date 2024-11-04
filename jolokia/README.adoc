@@ -1,4 +1,4 @@
-== Jolokia - Spring Boot Example
+== Jolokia - Spring Boot example
 
 === Abstract
 

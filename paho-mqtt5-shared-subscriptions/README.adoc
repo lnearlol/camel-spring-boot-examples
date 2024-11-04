@@ -1,4 +1,4 @@
-= PAHO MQTT5 Shared Subscription Quickstart - Spring Boot Example
+= PAHO MQTT5 Shared Subscription Quickstart - Spring Boot example
 
 === Abstract
 

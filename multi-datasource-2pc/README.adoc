@@ -1,4 +1,4 @@
-== Multiple pooled data sources and 2PC - Spring Boot Example
+== Multiple pooled data sources and 2PC - Spring Boot example
 
 === Abstract
 

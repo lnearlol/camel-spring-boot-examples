@@ -1,4 +1,4 @@
-== Endpoint DSL - Spring Boot Example
+== Endpoint DSL - Spring Boot example
 
 === Abstract
 

@@ -1,4 +1,4 @@
-== AWS2-S3 - Spring Boot Example
+== AWS2-S3 - Spring Boot example
 
 === Abstract
 

@@ -1,4 +1,4 @@
-== AMQP Salesforce - Spring Boot Example
+== AMQP Salesforce - Spring Boot example
 
 === Abstract
 

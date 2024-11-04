@@ -1,4 +1,4 @@
-== OpenTelemetry - Spring Boot Example
+== OpenTelemetry - Spring Boot example
 
 === Abstract
 

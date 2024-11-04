@@ -1,4 +1,4 @@
-== ActiveMQ Artemis - Spring Boot Example
+== ActiveMQ Artemis - Spring Boot example
 
 === Abstract
 

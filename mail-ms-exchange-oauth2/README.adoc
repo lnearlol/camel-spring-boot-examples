@@ -1,4 +1,4 @@
-== Microsoft Exchange IMAP Oauth2 Authentication - Spring Boot Example
+== Microsoft Exchange IMAP Oauth2 Authentication - Spring Boot example
 
 === Abstract
 

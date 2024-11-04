@@ -1,4 +1,4 @@
-== Master component clustered route controller - Spring Boot Example
+== Master component clustered route controller - Spring Boot example
 
 === Abstract
 

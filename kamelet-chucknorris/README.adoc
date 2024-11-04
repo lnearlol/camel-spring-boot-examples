@@ -1,4 +1,4 @@
-== Kamelet Chuck Norris - Spring Boot Example
+== Kamelet Chuck Norris - Spring Boot example
 
 === Abstract
 

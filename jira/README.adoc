@@ -1,4 +1,4 @@
-== Jira API - Spring Boot Example
+== Jira API - Spring Boot example
 
 === Abstract
 

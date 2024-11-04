@@ -1,4 +1,4 @@
-= Micrometer, Prometheus and Grafana - Spring Boot Example
+= Micrometer, Prometheus and Grafana - Spring Boot example
 :autofit-option:
 
 === Abstract

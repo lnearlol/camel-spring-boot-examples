@@ -1,4 +1,4 @@
-== ActiveMQ AMQP - Spring Boot Example
+== ActiveMQ AMQP - Spring Boot example
 
 === Abstract
 
