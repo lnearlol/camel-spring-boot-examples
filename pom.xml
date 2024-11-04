@@ -36,6 +36,7 @@
 	<packaging>pom</packaging>
 
 	<modules>
+		<module>activemq</module>
 		<module>actuator-http-metrics</module>
 		<module>amqp</module>
 		<module>amqp-salesforce</module>
@@ -59,6 +60,7 @@
 		<module>master</module>
 		<module>metrics</module>
 		<module>monitoring-micrometrics-grafana-prometheus</module>
+		<module>multi-datasource-2pc</module>
 		<module>observation</module>
 		<module>openapi-contract-first</module>
 		<module>opentelemetry</module>
@@ -78,6 +80,7 @@
 		<module>routetemplate</module>
 		<module>routetemplate-xml</module>
 		<module>saga</module>
+		<module>servicecall</module>
 		<module>soap-cxf</module>
 		<module>splitter-eip</module>
 		<module>spring-boot</module>
@@ -86,6 +89,7 @@
 		<module>spring-jdbc</module>
 		<module>strimzi</module>
 		<module>supervising-route-controller</module>
+		<module>tomcat-jdbc</module>
 		<module>type-converter</module>
 		<module>validator</module>
 		<module>webhook</module>
