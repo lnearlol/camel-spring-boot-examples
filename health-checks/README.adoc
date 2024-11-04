@@ -2,7 +2,7 @@
 
 === Abstract
 
-This example shows how to work with a simple Apache Camel application using Spring Boot.
+An example on how to work with health checks ib a simple Apache Camel application using Spring Boot
 
 === Introduction
 
