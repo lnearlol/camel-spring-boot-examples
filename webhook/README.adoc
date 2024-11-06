@@ -1,6 +1,10 @@
-== Camel Example Webhook
+== Webhook - Spring Boot example
+
+=== Abstract
 
 This example shows the webhook meta-component in action using one of the supported components: telegram.
+
+=== Introduction
 
 The example starts up a spring-boot application that configures automatically a webhook using the Telegram API to point to the local application and
 waits for messages.

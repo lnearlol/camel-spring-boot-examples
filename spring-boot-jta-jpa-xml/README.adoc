@@ -1,6 +1,10 @@
-= Camel Example Spring Boot JTA
+= JTA with XML - Spring Boot example
+
+=== Abstract
 
 This example demonstrates how to run a Camel Service on Spring Boot that supports JTA transactions on two external transactional resources: a database (MySQL) and a message broker (Artemis).
+
+=== Introduction
 
 We use Narayana as standalone JTA Transaction Manager implementation, and Hibernate as JPA Adapter.
 Most of the configuration is in `src/main/resources/spring-camel.xml` with no auto-configuration magic, in order to show all components needed to support distributed transactions without a full blown application server.

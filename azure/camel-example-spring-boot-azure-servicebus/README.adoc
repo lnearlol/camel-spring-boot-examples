@@ -1,8 +1,10 @@
-== Spring Boot Example with Azure Service Bus
+== Azure Service Bus - Spring Boot example
 
-=== Introduction
+=== Abstract
 
 This example demonstrates how you can use the Camel Azure Service Bus Starter component.
+
+=== Introduction
 
 NOTE: Running this sample will be charged by Azure. You can check the usage and bill at this https://azure.microsoft.com/get-started/azure-portal/[link].
 

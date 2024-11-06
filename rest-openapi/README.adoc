@@ -1,8 +1,10 @@
-== Spring Boot Example with Camel REST DSL and OpenApi
+== REST DSL and OpenApi - Spring Boot example
 
-=== Introduction
+=== Abstract
 
 This example illustrates how to use https://projects.spring.io/spring-boot/[Spring Boot] with http://camel.apache.org[Camel]. It provides a simple REST service that is created with http://camel.apache.org/rest-dsl.html[Camel REST DSL] and documented with http://swagger.io[OpenApi].
+
+=== Introduction
 
 The project uses the `camel-spring-boot-starter` dependency, a Spring Boot starter dependency for Camel that simplifies the Maven configuration. 
 

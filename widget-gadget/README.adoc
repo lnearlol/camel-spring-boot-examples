@@ -1,8 +1,10 @@
-== Spring Boot Widget Gadget Example
+== Widget and gadget - Spring Boot example
 
-=== Introduction
+=== Abstract
 
 This example demonstrates the widget and gadget example from EIP book, running on Spring Boot.
+
+=== Introduction
 
 The example with a similar setup (e.g. without Artemis) can be found in this illustration https://camel.apache.org/components/latest/eips/composed-message-processor.html[here]:
 

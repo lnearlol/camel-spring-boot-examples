@@ -1,6 +1,10 @@
-== Camel Spring Boot example with JBoss Web Server and database connection
+== JBoss Web Server with JDBC data source - Spring Boot example
+
+=== Abstract
 
 This example shows how to work with a simple Apache Camel Spring Boot application deploying to JBoss Web Server and using its JDBC data source.
+
+=== Introduction
 
 The example generates 2 routes:
 

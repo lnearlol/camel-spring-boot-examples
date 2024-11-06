@@ -1,9 +1,12 @@
-== Spring Boot Example with POJO Routing
+== POJO Routing - Spring Boot example
+
+=== Abstract
+
+This example demonstrates how you can use POJO Routing with Camel's `@Consume` and `@Produce` annotations on your Java beans.
 
 === Introduction
 
-This example demonstrates how you can use POJO Routing with Camel's `@Consume` and `@Produce` annotations
-on your Java beans. The example will generate a series of random numbers that is routed to either a low
+The example will generate a series of random numbers that is routed to either a low
 or high method call. The method then constructs a new message that is routed to another POJO
 hidden by an interface.
 

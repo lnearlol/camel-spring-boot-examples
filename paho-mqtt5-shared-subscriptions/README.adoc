@@ -1,8 +1,15 @@
-= Spring Boot Camel PAHO MQTT5 Shared Subscription Quickstart
+= PAHO MQTT5 Shared Subscription Quickstart - Spring Boot example
+
+=== Abstract
 
 This quickstart demonstrates how to set up multiple mqtt5 consumers that use shared subscription feature of mqtt5 in order to balance the load across the consumers.
 
+=== Introduction
+
+
+
 === MQTT 5.0 protocol introduction-shared subscription
+
 Shared subscription is a new feature introduced by MQTT 5.0 protocol, which is equivalent to the load balancing function of the subscribers.
 
 We know that the general non-shared subscription message publishing process is like this:

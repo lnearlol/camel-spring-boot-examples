@@ -1,6 +1,10 @@
-= Camel Example Spring Boot JTA
+= JTA with properties - Spring Boot example
+
+=== Abstract
 
 This example demonstrates how to run a Camel Service on Spring Boot that supports JTA transactions on two external transactional resources: a database (MySQL) and a message broker (Artemis) together with a crash recovery.
+
+==== Introduction
 
 We use Narayana as standalone JTA Transaction Manager implementation, and Hibernate as JPA Adapter.
 Most of the configuration is automatically configured by Spring-Boot using AutoConfiguration and you can see the related properties in `application.properties` and `application-local.properties`/`application-openshift.properties`, depending on the environment you are using.

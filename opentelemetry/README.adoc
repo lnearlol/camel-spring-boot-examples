@@ -1,8 +1,11 @@
-== OpenTelemetry example
+== OpenTelemetry - Spring Boot example
+
+=== Abstract
+
+This example shows how to use Camel with OpenTelemetry standard.
 
 == Introduction
 
-This example shows how to use Camel with OpenTelemetry standard:
 image:./adoc/img/example.jpeg?raw=true[example]
 
 The environment is the following:

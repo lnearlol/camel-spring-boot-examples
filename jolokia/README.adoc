@@ -1,6 +1,10 @@
-== Jolokia Example
+== Jolokia - Spring Boot example
+
+=== Abstract
 
 This example shows how Camel can be monitored and managed using https://jolokia.org[Jolokia] and https://hawt.io[Hawtio]
+
+=== Introduction
 
 === How to run
 

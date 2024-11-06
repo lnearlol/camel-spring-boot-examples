@@ -1,9 +1,11 @@
-== Resilience4j Example
+== Resilience4j - Spring Boot example
 
-=== Introduction
+=== Abstract
 
 This example shows how to use Camel with Resilience4j EIP as circuit breaker
 in Camel routes
+
+=== Introduction
 
 The example includes three sub maven modules that implement
 

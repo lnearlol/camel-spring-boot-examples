@@ -1,7 +1,11 @@
-== Camel Example Spring Boot Route Configuration
+== Route Configuration - Spring Boot example
+
+=== Abstract
 
 This example shows how Camel is capable of loading routes during startup using the new route loader system.
 The route loader has support for loading routes in XML, Java and YAML (other languages to be added).
+
+=== Introduction
 
 In this example the focus is on how you can use global _routes configuration_ with the DSL to separate
 error handling (and other cross routes functionality) from all your routes.

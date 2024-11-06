@@ -1,6 +1,10 @@
 == Spring Boot and ServiceCall EIP Example
 
+=== Abstract
+
 This example show how to use Camel with Splitter EIP with Spring Boot.
+
+=== Introduction
 
 Examples
 

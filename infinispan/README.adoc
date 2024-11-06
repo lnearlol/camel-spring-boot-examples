@@ -1,8 +1,12 @@
-== Spring Boot Example with Infinispan
+== Infinispan - Spring Boot example
+
+=== Abstract
+
+This example demonstrates how you can use Camel-Infinispan Starter component.
 
 === Introduction
 
-This example demonstrates how you can use Camel-Infinispan Starter component. The example is really simple: put a key/value pair in a remote cache and get the same key.
+The example is really simple: put a key/value pair in a remote cache and get the same key.
 This example starts an Infinispan server with Infinispan Docker Image, so it can run OOTB.
 
 === Build and test

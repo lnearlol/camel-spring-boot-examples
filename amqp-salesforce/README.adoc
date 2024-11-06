@@ -1,9 +1,12 @@
-== AMQP Salesforce Example
+== AMQP Salesforce - Spring Boot example
+
+=== Abstract
+
+This example listens for JSON messages sent to the AMQP server.
 
 === Introduction
 
-This example listen for JSON messages sent to the AMQP server. Information from the user whom mentions is then created
-as a contact in Salesforce.
+Information about the user in the message is created as a contact in Salesforce.
 
 === Configuring AMQP
 

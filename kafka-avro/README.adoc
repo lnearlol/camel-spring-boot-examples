@@ -1,8 +1,10 @@
-== Camel Kafka example
+== Camel Kafka - Spring Boot example
 
-=== Introduction
+=== Abstract
 
 An example which shows how to use the link:https://avro.apache.org/docs/[Apache Avro] dataformat with Camel with the use of link:https://www.apicur.io/registry/[Apicurio Registry]
+
+=== Introduction
 
 The application is configured to create the schema in apicurio registry if it doesn't exist. This schema is then used to serialize and deserialize the link:src/main/java/org/apache/camel/springboot/example/avro/Employee.java[Employee] instance from/to a kafka topic. A new Employee instance is periodically serialized into a configured topic by one camel route and consumed, deserialized and printed to the log by the second route.
 

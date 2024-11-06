@@ -1,6 +1,10 @@
-== Camel Spring Boot with multiple pooled datasources and 2PC
+== Multiple pooled data sources and 2PC - Spring Boot example
+
+=== Abstract
 
 This example shows how to set up multiple pooled datasources with Camel Spring Boot and have them working with two-phase commit.
+
+=== Introduction
 
 One of the databases has a non-unique `name` column, while the other has a unique one. When trying to insert repeated names in both databases at the same time, the second `prepare` should fail making the transaction rollback for both databases.
 

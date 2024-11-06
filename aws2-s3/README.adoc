@@ -1,8 +1,12 @@
-== Spring Boot Example with AWS2-S3
+== AWS2-S3 - Spring Boot example
+
+=== Abstract
+
+This example demonstrates how you can use Camel-AWS2-S3 Starter component.
 
 === Introduction
 
-This example demonstrates how you can use Camel-AWS2-S3 Starter component. The example is really simple: load file into your bucket and consume it.
+The example is really simple: load file into your bucket and consume it.
 
 === Build
 

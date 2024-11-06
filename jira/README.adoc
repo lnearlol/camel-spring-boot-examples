@@ -1,6 +1,12 @@
-== Jira API Example
+== Jira API - Spring Boot example
+
+=== Abstract
 
 This example shows how to use Jira Camel Endpoint to retrieve new comments, add issue and add an attachment.
+
+=== Introduction
+
+
 
 === How to run
 
