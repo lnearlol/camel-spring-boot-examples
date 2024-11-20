@@ -27,140 +27,143 @@ readme's instructions.
 === Examples
 
 // examples: START
-
 Number of Examples: 61 (0 deprecated)
 
-
-
-[width = "100%", cols = "2,6,2,2", options = "header"]
+[width="100%",cols="4,2,4",options="header"]
 |===
+| Example | Category | Description
 
-| Example | Category | Description| Deploy with devfile
-| link:activemq/README.adoc[ActiveMQ] (activemq) | Messaging | An example showing how to work with Camel, ActiveMQ openwire and Spring Boot | No
+| link:spring-boot-jta-jpa-autoconfigure/README.adoc[Spring Boot Jta Jpa Autoconfigure] (spring-boot-jta-jpa-autoconfigure) | Advanced | An example showing JTA with Spring Boot Autoconfiguration
 
-| link:actuator-http-metrics/README.adoc[Actuator HTTP Metrics] (actuator-http-metrics) | Management and Monitoring | Example on how to use Spring Boot's Actuator endpoints to gather info like mappings or metrics | No
+| link:spring-boot-jta-jpa-xml/README.adoc[Spring Boot Jta Jpa Xml] (spring-boot-jta-jpa-xml) | Advanced | An example showing JTA with Spring Boot using Spring XML configuration
 
-| link:amqp/README.adoc[Amqp] (amqp) | Messaging | An example showing how to work with Camel, ActiveMQ Amqp and Spring Boot | No
+| link:webhook/README.adoc[Webhook] (webhook) | Advanced | Example on how to use the Camel Webhook component
 
-| link:amqp-salesforce/README.adoc[AMQP Salesforce] (amqp-salesforce) | Messaging | AMQP message sending is created as contacts in Salesforce | No
+| link:endpointdsl/README.adoc[Endpointdsl] (endpointdsl) | Beginner | Using type-safe Endpoint DSL
 
-| link:arangodb/README.adoc[ArangoDB] (arangodb) | Database | An example showing the Camel ArangoDb component with Spring Boot | No
+| link:jira/README.adoc[Jira] (jira) | Beginner | An example that uses Jira Camel API
 
-| link:artemis/README.adoc[artemis] (artemis) | Messaging | An example showing how to work with Camel, ActiveMQ Artemis and Spring Boot | No
+| link:kamelet-chucknorris/README.adoc[Kamelet Chucknorris] (kamelet-chucknorris) | Beginner | How easy it is to create your own Kamelets
 
-| link:aws2-s3/README.adoc[AWS2 S3] (aws2-s3) | Cloud | An example showing the Camel AWS2 S3 component with Spring Boot | No
+| link:load-balancer-eip/README.adoc[Load Balancer Eip] (load-balancer-eip) | Beginner | An example showing Load Balancer EIP with Camel and Spring Boot
 
-| link:azure/camel-example-spring-boot-azure-eventhubs/README.adoc[Azure Event Hubs] (azure-eventhubs) | Cloud | An example showing how to work with Camel, Azure Event Hubs and Spring Boot | No
+| link:pojo/README.adoc[Pojo] (pojo) | Beginner | An example showing how to work with Camel POJO routing with Spring Boot
 
-| link:azure/camel-example-spring-boot-azure-servicebus/README.adoc[Azure Service Bus] (azure-servicebus) | Cloud | An example showing how to work with Camel, Azure Service Bus and Spring Boot | No
+| link:quartz/README.adoc[Quartz] (quartz) | Beginner | An example showing how to work with Camel Quartz and Camel Log with Spring Boot
 
-| link:endpointdsl/README.adoc[Endpoint DSL] (camel-example-endpointdsl) | Beginner | Using type-safe Endpoint DSL | No
+| link:rest-openapi-simple/README.adoc[REST OpenApi] (rest-openapi-simple) | Beginner | This example shows how to call a Rest service defined using OpenApi specification
 
-| link:fhir/README.adoc[FHIR] (fhir) | Health Care | An example showing how to work with Camel, FHIR and Spring Boot | No
+| link:route-reload/README.adoc[Spring Boot Route Reload] (route-reload) | Beginner | Live reload of routes if file is updated and saved
 
-| link:fhir-auth-tx/README.adoc[Transaction] (fhir-auth-tx) | Health Care | An example showing how to work with Camel, FHIR Authorization, FHIR Transaction and Spring Boot | Yes
+| link:routes-configuration/README.adoc[Routes Configuration] (routes-configuration) | Beginner | Example with global routes configuration for error handling
 
-| link:health-checks/README.adoc[Health Checks] (health-checks) | Health Care | An example on how to work with health checks ib a simple Apache Camel application using Spring Boot. | Yes
+| link:routetemplate/README.adoc[Routetemplate] (routetemplate) | Beginner | How to use route templates (parameterized routes)
 
-| link:http-ssl/README.adoc[HTTP SSL] (http-ssl) | Rest | An example showing the Camel HTTP component with Spring Boot and SSL | No
+| link:routetemplate-xml/README.adoc[Routetemplate Xml] (routetemplate-xml) | Beginner | How to use route templates (parameterized routes) in XML
 
-| link:infinispan/README.adoc[Infinispan] (infinispan) | Cloud | An example showing the Camel Infinispan component with Spring Boot | No
+| link:splitter-eip/README.adoc[Splitter Eip] (splitter-eip) | Beginner | An example showing Splitter EIP with Camel and Spring Boot
 
-| link:jira/README.adoc[Jira] (jira) | Beginner | An example that uses Jira Camel API | No
+| link:spring-boot/README.adoc[Spring Boot] (spring-boot) | Beginner | An example showing how to work with Camel and Spring Boot
 
-| link:jolokia/README.adoc[Jolokia] (jolokia) | Management and Monitoring | An example that uses Jolokia to monitor and to manage Camel Routes | No
+| link:spring-jdbc/README.adoc[Spring Jdbc] (spring-jdbc) | Beginner | Camel transacted routes integrating local Spring Transaction
 
-| link:kafka-avro/README.adoc[Avro] (kafka-avro) | Messaging | An example for Kafka avro | No
+| link:tomcat-jdbc/README.adoc[Tomcat Jdbc] (tomcat-jdbc) | Beginner | An example showing how to deploy a Camel Spring Boot application in Tomcat using its JDBC Data Source
 
-| link:kafka-offsetrepository/README.adoc[offsetrepository] (kafka-offsetrepository) | Messaging | An example for Kafka offsetrepository | No
+| link:type-converter/README.adoc[Type Converter] (type-converter) | Beginner | An example showing how to create custom type converter with Camel and Spring Boot
 
-| link:kamelet-chucknorris/README.adoc[Kamelet Chuck Norris] (kamelet-chucknorris) | Beginner | How easy it is to create your own Kamelets | Yes
+| link:xml/README.adoc[Spring Boot XML] (xml) | Beginner | An example showing how to work with Camel routes in XML files and Spring Boot
 
-| link:load-balancer-eip/README.adoc[Custom Type Converter] (load-balancer-eip) | Beginner | An example showing Load Balancer EIP with Camel and Spring Boot | Yes
+| link:xml-import/README.adoc[Spring Boot XML Import] (xml-import) | Beginner | An example showing how to work with Spring XML files imported with embedded CamelContext
 
-| link:mail-ms-exchange-oauth2/README.adoc[Microsoft Exchange Oauth2 Authentication] (mail-exchange-oauth2) | Mail | An example showing how to use Camel on Spring Boot to connect with IMAP protocol and access email data for Office 365 users using OAuth2 authentication | No
+| link:aws2-s3/README.adoc[Aws2 S3] (aws2-s3) | Cloud | An example showing the Camel AWS2 S3 component with Spring Boot
 
-| link:master/README.adoc[Master] (master) | Clustering | An example showing how to work with Camel's Master component and Spring Boot | No
+| link:azure/camel-example-spring-boot-azure-eventhubs/README.adoc[Spring Boot Azure Eventhubs] (camel-example-spring-boot-azure-eventhubs) | Cloud | An example showing how to work with Camel, Azure Event Hubs and Spring Boot
 
-| link:metrics/README.adoc[Metrics] (metrics) | Management and Monitoring | An example showing how to work with Camel and Spring Boot and report metrics to Graphite | Yes
+| link:azure/camel-example-spring-boot-azure-servicebus/README.adoc[Spring Boot Azure Servicebus] (camel-example-spring-boot-azure-servicebus) | Cloud | An example showing how to work with Camel, Azure Service Bus and Spring Boot
 
-| link:monitoring-micrometrics-grafana-prometheus/README.adoc[Monitoring] (monitoring) | Management and Monitoring | Example on how to use Spring Boot's Actuator endpoints to gather info like mappings or metrics | No
+| link:infinispan/README.adoc[Infinispan] (infinispan) | Cloud | An example showing the Camel Infinispan component with Spring Boot
 
-| link:multi-datasource-2pc/README.adoc[Multiple pooled datasources with two-phase commit] (muti-datasources-2pc) | Database | An example showing how to work with Camel and Spring Boot using multiple pooled datasources with two-phase commit | No
+| link:servicecall/README.adoc[Spring Boot ServiceCall] (servicecall) | Cloud | An example showing how to work with Camel ServiceCall EIP and Spring Boot
 
-| link:observation/README.adoc[Observation] (observation) | Management and Monitoring | An example showing how to trace incoming and outgoing messages from Camel with Micrometer Observation | No
+| link:master/README.adoc[Master] (master) | Clustering | An example showing how to work with Camel's Master component and Spring Boot
 
-| link:openapi-contract-first/README.adoc[OpenAPI Contract First] (openapi-contract-first) | Rest | Contract First OpenAPI example | No
+| link:rest-cxf-opentelemetry/README.adoc[Rest Cxf Opentelemetry] (rest-cxf-opentelemetry) | CXF | An example showing Camel REST using CXF and OpenTelemetry with Spring Boot
 
-| link:opentelemetry/README.adoc[OpenTelemetry] (opentelemetry) | Management and Monitoring | An example showing how to use Camel with OpenTelemetry | No
+| link:soap-cxf/README.adoc[Soap Cxf] (soap-cxf) | CXF | An example showing the Camel SOAP CXF
 
-| link:paho-mqtt5-shared-subscriptions/README.adoc[Paho MQTT5 Shared Subscriptions] (paho-mqtt5-shared-subscriptions) | Messaging | An example showing how to set up multiple mqtt5 consumers that use shared subscription feature of MQTT5 | Yes
+| link:arangodb/README.adoc[Arangodb] (arangodb) | Database | An example showing the Camel ArangoDb component with Spring Boot
 
-| link:platform-http/README.adoc[REST DSL and Platform HTTP] (platform-http) | Rest | An example showing Camel REST DSL with platform HTTP | No
+| link:multi-datasource-2pc/README.adoc[Multi Datasource 2pc] (multi-datasource-2pc) | Database | An example showing how to work with Camel and Spring Boot using multiple pooled datasources with two-phase commit
 
-| link:pojo/README.adoc[POJO Routing] (pojo) | Beginner | An example showing how to work with Camel POJO routing with Spring Boot | Yes
+| link:resilience4j/README.adoc[Resilience4j] (resilience4j) | EIP | An example showing how to use Resilience4j EIP as circuit breaker in Camel routes
 
-| link:quartz/README.adoc[Quartz] (quartz) | Beginner | An example showing how to work with Camel Quartz and Camel Log with Spring Boot | Yes
+| link:saga/README.adoc[Saga] (saga) | EIP | This example shows how to work with a simple Apache Camel application using Spring Boot and Narayana LRA Coordinator to manage distributed actions implementing SAGA pattern
 
-| link:rabbitmq/README.adoc[RabbitMQ] (rabbitmq) | Messaging | An example showing how to work with Camel and RabbitMQ | No
+| link:fhir/README.adoc[Fhir] (fhir) | Health Care | An example showing how to work with Camel, FHIR and Spring Boot
 
-| link:reactive-streams/README.adoc[Reactive Streams] (reactive-streams) | Reactive | An example that shows how Camel can exchange data using reactive streams with Spring Boot reactor | Yes
+| link:fhir-auth-tx/README.adoc[Fhir Auth Tx] (fhir-auth-tx) | Health Care | An example showing how to work with Camel, FHIR Authorization, FHIR Transaction and Spring Boot
+    
 
-| link:resilience4j/README.adoc[Resilience4j] (resilience4j) | EIP | An example showing how to use Resilience4j EIP as circuit breaker in Camel routes | No
+| link:health-checks/README.adoc[Health Checks] (health-checks) | Health Care | An example on how to work with health checks ib a simple Apache Camel application using Spring Boot.
 
-| link:rest-cxf-opentelemetry/README.adoc[REST using CXF and OpenTelemetry] (rest-cxf-opentelemetry) | CXF | An example showing Camel REST using CXF and OpenTelemetry with Spring Boot | No
+| link:validator/README.adoc[Validator Spring Boot] (validator) | Input/Output Type Contract | An example showing how to work with declarative validation and Spring Boot
 
-| link:rest-openapi/README.adoc[REST DSL and OpenApi] (rest-openapi) | Rest | An example showing Camel REST DSL and OpenApi with Spring Boot | Yes
+| link:mail-ms-exchange-oauth2/README.adoc[Mail Ms Exchange Oauth2] (mail-ms-exchange-oauth2) | Mail | An example showing how to use Camel on Spring Boot to connect
+        with IMAP protocol and access email data for Office 365 users using OAuth2 authentication
 
-| link:rest-openapi-simple/README.adoc[OpenApi Simple] (rest-openapi-simple) | Beginner | This example shows how to call a Rest service defined using OpenApi specification | No
+| link:actuator-http-metrics/README.adoc[Actuator Http Metrics] (actuator-http-metrics) | Management and Monitoring | Example on how to use Spring Boot's Actuator endpoints to gather info like mappings or metrics
 
-| link:rest-openapi-springdoc/README.adoc[REST DSL and OpenApi] (rest-openapi-springdoc) | Rest | An example showing Camel REST DSL and OpenApi with a Springdoc UI in a Spring Boot application | Yes
+| link:jolokia/README.adoc[Jolokia] (jolokia) | Management and Monitoring | An example that uses Jolokia to monitor and to manage Camel Routes
 
-| link:route-reload/README.adoc[Route Reload] (route-reload) | Beginner | Live reload of routes if file is updated and saved | Yes
+| link:metrics/README.adoc[Metrics] (metrics) | Management and Monitoring | An example showing how to work with Camel and Spring Boot and report metrics to Graphite
 
-| link:routes-configuration/README.adoc[Routes Configuration] (routes-configuration) | Beginner | Example with global routes configuration for error handling | No
+| link:monitoring-micrometrics-grafana-prometheus/README.adoc[Monitoring Micrometrics Grafana Prometheus] (monitoring-micrometrics-grafana-prometheus) | Management and Monitoring | Example on how to use Spring Boot's Actuator endpoints to
+        gather info like mappings or metrics
+    
 
-| link:routetemplate/README.adoc[Route Template] (routetemplate) | Beginner | How to use route templates (parameterized routes) | Yes
+| link:observation/README.adoc[Micrometer Observation] (observation) | Management and Monitoring | An example showing how to trace incoming and outgoing messages from Camel with Micrometer Observation
+    
 
-| link:routetemplate-xml/README.adoc[XML] (routetemplate-xml) | Beginner | How to use route templates (parameterized routes) in XML | No
+| link:opentelemetry/README.adoc[OpenTelemetry] (opentelemetry) | Management and Monitoring | An example showing how to use Camel with OpenTelemetry
+    
 
-| link:saga/README.adoc[Saga] (saga) | EIP | This example shows how to work with a simple Apache Camel application using Spring Boot and Narayana LRA Coordinator to manage distributed actions implementing SAGA pattern | No
+| link:supervising-route-controller/README.adoc[Supervising Route Controller] (supervising-route-controller) | Management and Monitoring | An example showing how to work with Camel's Supervising Route Controller and Spring Boot
 
-| link:servicecall/README.adoc[ServiceCall] (servicecall) | Cloud | An example showing how to work with Camel ServiceCall EIP and Spring Boot | No
+| link:activemq/README.adoc[Activemq] (activemq) | Messaging | An example showing how to work with Camel, ActiveMQ openwire and Spring Boot
 
-| link:soap-cxf/README.adoc[SOAP CXF] (soap-cxf) | CXF | An example showing the Camel SOAP CXF | No
+| link:amqp/README.adoc[Amqp] (amqp) | Messaging | An example showing how to work with Camel, ActiveMQ Amqp and Spring Boot
 
-| link:splitter-eip/README.adoc[Camel Splitter EIP] (splitter-eip) | Beginner | An example showing Splitter EIP with Camel and Spring Boot | Yes
+| link:amqp-salesforce/README.adoc[Amqp Salesforce] (amqp-salesforce) | Messaging | AMQP message sending is created as contacts in Salesforce
 
-| link:spring-boot/README.adoc[Spring Boot] (camel-example-spring-boot) | Beginner | An example showing how to work with Camel and Spring Boot | No
+| link:artemis/README.adoc[Artemis] (artemis) | Messaging | An example showing how to work with Camel, ActiveMQ Artemis and Spring Boot
 
-| link:spring-boot-jta-jpa-autoconfigure/README.adoc[JTA] (spring-boot-jta-jpa-autoconfigure) | Advanced | An example showing JTA with Spring Boot Autoconfiguration | No
+| link:kafka-avro/README.adoc[Kafka Avro] (kafka-avro) | Messaging | An example for Kafka avro
 
-| link:spring-boot-jta-jpa-xml/README.adoc[JTA] (spring-boot-jta-jpa-xml) | Advanced | An example showing JTA with Spring Boot using Spring XML configuration | No
+| link:kafka-offsetrepository/README.adoc[Kafka Offsetrepository] (kafka-offsetrepository) | Messaging | An example for Kafka offsetrepository
 
-| link:spring-jdbc/README.adoc[Spring JDBC] (spring-jdbc) | Beginner | Camel transacted routes integrating local Spring Transaction | No
+| link:paho-mqtt5-shared-subscriptions/README.adoc[Paho Mqtt5 Shared Subscriptions] (paho-mqtt5-shared-subscriptions) | Messaging | An example showing  how to set up multiple mqtt5 consumers that use shared subscription feature of MQTT5
 
-| link:strimzi/README.adoc[Strimzi] (strimzi) | Messaging | Camel example which a route is defined in XML for Strimzi integration on Openshift/Kubernetes | No
+| link:rabbitmq/README.adoc[Rabbitmq] (rabbitmq) | Messaging | An example showing how to work with Camel and RabbitMQ
 
-| link:supervising-route-controller/README.adoc[Supervising Route Controller] (supervising-route-controller) | Management and Monitoring | An example showing how to work with Camel's Supervising Route Controller and Spring Boot | Yes
+| link:strimzi/README.adoc[Strimzi] (strimzi) | Messaging | Camel example which a route is defined in XML for Strimzi
+        integration on Openshift/Kubernetes
+    
 
-| link:tomcat-jdbc/README.adoc[Tomcat JDBC] (camel-example-spring-boot) | Beginner | An example showing how to deploy a Camel Spring Boot application in Tomcat using its JDBC Data Source | No
+| link:widget-gadget/README.adoc[Widget Gadget] (widget-gadget) | Messaging | The widget and gadget example from EIP book, running on Spring Boot
 
-| link:type-converter/README.adoc[Custom Type Converter] (type-converter) | Beginner | An example showing how to create custom type converter with Camel and Spring Boot | Yes
+| link:reactive-streams/README.adoc[Reactive Streams] (reactive-streams) | Reactive | An example that shows how Camel can exchange data using reactive streams with Spring Boot reactor
+    
 
-| link:validator/README.adoc[Validator] (validator) | Input/Output Type Contract | An example showing how to work with declarative validation and Spring Boot | Yes
+| link:http-ssl/README.adoc[Http Ssl] (http-ssl) | Rest | An example showing the Camel HTTP component with Spring Boot and SSL
 
-| link:webhook/README.adoc[Webhook] (webhook) | Advanced | Example on how to use the Camel Webhook component | No
+| link:openapi-contract-first/README.adoc[Openapi Contract First] (openapi-contract-first) | Rest | Contract First OpenAPI example
 
-| link:widget-gadget/README.adoc[Widget Gadget] (widget-gadget) | Messaging | The widget and gadget example from EIP book, running on Spring Boot | No
+| link:platform-http/README.adoc[Platform Http] (platform-http) | Rest | An example showing Camel REST DSL with platform HTTP
 
-| link:xml/README.adoc[XML] (xml) | Beginner | An example showing how to work with Camel routes in XML files and Spring Boot | Yes
+| link:rest-openapi/README.adoc[Rest Openapi] (rest-openapi) | Rest | An example showing Camel REST DSL and OpenApi with Spring Boot
 
-| link:xml-import/README.adoc[XML Import] (xml-import) | Beginner | An example showing how to work with Spring XML files imported with embedded CamelContext | Yes
-
-
+| link:rest-openapi-springdoc/README.adoc[Rest Openapi Springdoc] (rest-openapi-springdoc) | Rest | An example showing Camel REST DSL and OpenApi with a Springdoc UI in a Spring Boot application
 |===
-
 // examples: END
 
 
