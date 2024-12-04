@@ -213,6 +213,12 @@ INFO [scheduling-1] dev.snowdrop.boot.narayana.openshift.recovery.StatefulsetRec
 
 After finishing its pending work the statefulset can be scaled down as usual.
 
+=== Additional notes about Openshift running
+
+In order to have different node-id on concurrent pods, we set the property `narayana.shorten-node-identifier-if-necessary=true`.
+
+The result is a shortening ensuring the transaction node-id to be less than 28 characters. It's implemented by hashing the node name, encoding the hash to Base64 and then truncating the result. It is safe to enable it but keep in mind that: "As with all hashes, the resulting shortened node name could potentially conflict with another shortened node name, but it is very unlikely."
+
 === Help and contributions
 
 If you hit any problem using Camel or have some feedback, then please https://camel.apache.org/support.html[let us know].
