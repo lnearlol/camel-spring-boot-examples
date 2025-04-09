@@ -20,19 +20,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.apache.camel.springboot.example</groupId>
-        <artifactId>examples</artifactId>
-        <version>4.10.3-SNAPSHOT</version>
-    </parent>
-
     <artifactId>camel-example-spring-boot-infinispan</artifactId>
+    <groupId>org.apache.camel.springboot.example</groupId>
+    <version>4.10.3-SNAPSHOT</version>    
     <name>Camel SB Examples :: Infinispan</name>
     <description>An example showing the Camel Infinispan component with Spring Boot</description>
 
     <properties>
         <category>Cloud</category>
-        <spring.boot-version>${spring-boot-version}</spring.boot-version>
+        <camel-spring-boot-version>4.10.3.redhat-00003</camel-spring-boot-version>
+        <spring-boot-version>3.4.4</spring-boot-version>
+        <testcontainers-version>1.20.6</testcontainers-version>
     </properties>
 
     <!-- Spring-Boot and Camel BOM -->
@@ -101,12 +99,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
+        <!--dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-test-junit5</artifactId>
             <version>${camel-version}</version>
             <scope>test</scope>
-        </dependency>
+        </dependency-->
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-test-spring-junit5</artifactId>
@@ -119,7 +117,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring.boot-version}</version>
+                <version>${spring-boot-version}</version>
                 <executions>
                     <execution>
                         <goals>

@@ -27,7 +27,7 @@ readme's instructions.
 === Examples
 
 // examples: START
-Number of Examples: 63 (0 deprecated)
+Number of Examples: 64 (0 deprecated)
 
 [width="100%",cols="4,2,4",options="header"]
 |===
@@ -131,6 +131,8 @@ Number of Examples: 63 (0 deprecated)
 
 | link:activemq/README.adoc[Activemq] (activemq) | Messaging | An example showing how to work with Camel, ActiveMQ openwire and Spring Boot
 
+| link:amq-cert-manager/README.adoc[Amq Cert Manager] (amq-cert-manager) | Messaging | An example showing how to work with Camel, ActiveMQ Amqp and Spring Boot
+
 | link:amqp/README.adoc[Amqp] (amqp) | Messaging | An example showing how to work with Camel, ActiveMQ Amqp and Spring Boot
 
 | link:amqp-salesforce/README.adoc[Amqp Salesforce] (amqp-salesforce) | Messaging | AMQP message sending is created as contacts in Salesforce
@@ -139,7 +141,7 @@ Number of Examples: 63 (0 deprecated)
 
 | link:kafka-avro/README.adoc[Kafka Avro] (kafka-avro) | Messaging | An example for Kafka avro
 
-| link:kafka-oauth-ocp/README.adoc[Kafka OAuth on OCP] (kafka-oauth-ocp) | Messaging | An example for Kafka on OCP using integrated OAuth
+| link:kafka-oauth-ocp/README.adoc[Kafka Oauth Ocp] (kafka-oauth-ocp) | Messaging | An example for Kafka on OCP using integrated OAuth
 
 | link:kafka-offsetrepository/README.adoc[Kafka Offsetrepository] (kafka-offsetrepository) | Messaging | An example for Kafka offsetrepository
 

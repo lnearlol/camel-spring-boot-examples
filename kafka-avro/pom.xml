@@ -20,12 +20,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-        <groupId>org.apache.camel.springboot.example</groupId>
-        <artifactId>examples</artifactId>
-        <version>4.10.3-SNAPSHOT</version>
-    </parent>
 
+    <groupId>org.apache.camel.springboot.example</groupId>
+    <version>4.10.3-SNAPSHOT</version>
   <artifactId>camel-example-spring-boot-kafka-avro</artifactId>
   <name>Camel SB Examples :: Kafka :: Avro</name>
   <description>An example for Kafka avro</description>
@@ -34,7 +31,8 @@
         <category>Messaging</category>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <spring.boot-version>${spring-boot-version}</spring.boot-version>
+        <camel-spring-boot-version>4.10.3.redhat-00003</camel-spring-boot-version>
+        <spring-boot-version>3.4.4</spring-boot-version>
         <avro.maven.plugin-version>1.11.2</avro.maven.plugin-version>
         <apicurio-version>2.4.3.Final</apicurio-version>
         <javafaker-version>1.0.2</javafaker-version>
@@ -131,7 +129,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring.boot-version}</version>
+                <version>${spring-boot-version}</version>
                 <executions>
                     <execution>
                         <goals>

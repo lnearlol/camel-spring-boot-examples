@@ -28,6 +28,8 @@
     </parent>
 
     <artifactId>camel-example-spring-boot-servicecall-services</artifactId>
+    <groupId>org.apache.camel.springboot.example</groupId>
+    <version>4.10.3-SNAPSHOT</version>    
     <name>Camel SB Examples :: ServiceCall :: Services</name>
     <description>An example showing how to work with Camel ServiceCall EIP and Spring Boot (Services)</description>
 
@@ -102,7 +104,6 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-test-spring-junit5</artifactId>
-            <version>${camel-version}</version>
             <scope>test</scope>
         </dependency>
 

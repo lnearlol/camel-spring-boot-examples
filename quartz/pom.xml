@@ -21,13 +21,9 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.apache.camel.springboot.example</groupId>
-        <artifactId>examples</artifactId>
-        <version>4.10.3-SNAPSHOT</version>
-    </parent>
-
     <artifactId>camel-example-spring-boot-quartz</artifactId>
+    <groupId>org.apache.camel.springboot.example</groupId>
+    <version>4.10.3-SNAPSHOT</version>    
     <name>Camel SB Examples :: Quartz</name>
     <description>An example showing how to work with Camel Quartz and Camel Log with Spring Boot</description>
 
@@ -36,7 +32,8 @@
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <spring.boot-version>${spring-boot-version}</spring.boot-version>
+        <camel-spring-boot-version>4.10.3.redhat-00003</camel-spring-boot-version>
+        <spring-boot-version>3.4.4</spring-boot-version>
     </properties>
 
     <dependencyManagement>
@@ -106,10 +103,8 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-test-spring-junit5</artifactId>
-            <version>${camel-version}</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 
     <build>

@@ -28,6 +28,8 @@
     </parent>
 
     <artifactId>camel-example-spring-boot-observation-service2</artifactId>
+    <groupId>org.apache.camel.springboot.example</groupId>
+    <version>4.10.3-SNAPSHOT</version>    
     <name>Camel SB Examples :: Observation :: Service 2</name>
     <description>An example showing how to trace incoming and outgoing messages from Camel with Micrometer Observation</description>
 

@@ -21,14 +21,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<parent>
-		<artifactId>examples</artifactId>
-		<groupId>org.apache.camel.springboot.example</groupId>
-		<version>4.10.3-SNAPSHOT</version>
-	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
+	<groupId>org.apache.camel.springboot.example</groupId>
 	<artifactId>camel-example-spring-boot-splitter-eip</artifactId>
+	<version>4.10.3-SNAPSHOT</version>
 	<name>Camel SB Examples :: Camel Splitter EIP</name>
 	<description>An example showing Splitter EIP with Camel and Spring Boot</description>
 
@@ -38,6 +35,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<spring.boot-version>${spring-boot-version}</spring.boot-version>
+		<camel-spring-boot-version>4.10.3.redhat-00003</camel-spring-boot-version>
+        <spring-boot-version>3.4.4</spring-boot-version>
 	</properties>
 
 	<dependencyManagement>

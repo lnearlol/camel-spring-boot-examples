@@ -28,6 +28,8 @@
     </parent>
 
     <artifactId>camel-example-spring-boot-opentelemetry-carbooking</artifactId>
+    <groupId>org.apache.camel.springboot.example</groupId>
+    <version>4.10.3-SNAPSHOT</version>    
     <name>Camel SB Examples :: OpenTelemetry :: CarBooking</name>
     <description>An example showing how to use Camel with OpenTelemetry</description>
 
