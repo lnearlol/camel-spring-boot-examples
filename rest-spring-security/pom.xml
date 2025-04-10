@@ -20,19 +20,24 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.apache.camel.springboot.example</groupId>
-        <artifactId>examples</artifactId>
-        <version>4.10.3-SNAPSHOT</version>
-    </parent>
-
     <artifactId>camel-example-spring-boot-rest-spring-security</artifactId>
-    <name>Camel SB Examples :: REST DSL - SPRING SECURITY - JWT</name>
+    <groupId>org.apache.camel.springboot.example</groupId>
+    <version>4.10.3-SNAPSHOT</version>    
+    <name>Camel SB Examples :: REST DSL - Spring Security - JWT</name>
     <description>An example showing Camel REST DSL secured with Spring Security and JWT token in a Spring Boot application
     </description>
 
     <properties>
         <category>Rest</category>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <camel-spring-boot-version>4.10.3.redhat-00004</camel-spring-boot-version>
+        <spring-boot-version>3.4.4</spring-boot-version>
+        <json-unit-assertj.version>4.1.0</json-unit-assertj.version>
+        <testcontainers-keycloak.version>3.6.0</testcontainers-keycloak.version>
+        <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
+        <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
+        <mapstruct-version>1.6.3</mapstruct-version>
     </properties>
 
     <!-- Spring-Boot and Camel BOM -->

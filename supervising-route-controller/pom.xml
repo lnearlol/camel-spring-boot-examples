@@ -21,13 +21,9 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.apache.camel.springboot.example</groupId>
-        <artifactId>examples</artifactId>
-        <version>4.10.3-SNAPSHOT</version>
-    </parent>
-
     <artifactId>camel-example-spring-boot-supervising-route-controller</artifactId>
+    <groupId>org.apache.camel.springboot.example</groupId>
+    <version>4.10.3-SNAPSHOT</version>    
     <name>Camel SB Examples :: Supervising Route Controller</name>
     <description>An example showing how to work with Camel's Supervising Route Controller and Spring Boot</description>
 
@@ -36,8 +32,9 @@
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <spring.boot-version>${spring-boot-version}</spring.boot-version>
-        <jolokia-version>2.0.1</jolokia-version>
+        <camel-spring-boot-version>4.10.3.redhat-00004</camel-spring-boot-version>
+        <spring-boot-version>3.4.4</spring-boot-version>
+        <jolokia-version>2.2.8.redhat-00002</jolokia-version>
     </properties>
 
     <dependencyManagement>
@@ -123,7 +120,6 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-test-spring-junit5</artifactId>
-            <version>${camel-version}</version>
             <scope>test</scope>
         </dependency>
 

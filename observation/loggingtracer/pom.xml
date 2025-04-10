@@ -28,6 +28,8 @@
     </parent>
 
     <artifactId>camel-example-spring-boot-observation-loggingtracer</artifactId>
+    <groupId>org.apache.camel.springboot.example</groupId>
+    <version>4.10.3-SNAPSHOT</version>    
     <name>Camel SB Examples :: Observation :: LoggingTracer</name>
     <description>An example Observation Tracer</description>
 

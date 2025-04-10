@@ -21,13 +21,9 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.apache.camel.springboot.example</groupId>
-        <artifactId>examples</artifactId>
-        <version>4.10.3-SNAPSHOT</version>
-    </parent>
-
     <artifactId>camel-example-spring-boot-artemis</artifactId>
+    <groupId>org.apache.camel.springboot.example</groupId>
+    <version>4.10.3-SNAPSHOT</version>    
     <name>Camel SB Examples :: artemis</name>
     <description>An example showing how to work with Camel, ActiveMQ Artemis and Spring Boot</description>
 
@@ -36,6 +32,8 @@
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <camel-spring-boot-version>4.10.3.redhat-00004</camel-spring-boot-version>
+        <spring-boot-version>3.4.4</spring-boot-version>
     </properties>
 
     <dependencyManagement>
@@ -143,7 +141,9 @@
             <id>openshift</id>
             <properties>
                 <spring.profiles.active>openshift</spring.profiles.active>
+                <jkube.generator.from>registry.access.redhat.com/ubi9/openjdk-17:latest</jkube.generator.from>
                 <jkube.build.switchToDeployment>true</jkube.build.switchToDeployment>
+                <jkube-maven-plugin-version>1.18.1.redhat-00010</jkube-maven-plugin-version>
             </properties>
             <build>
                 <finalName>${project.artifactId}</finalName>

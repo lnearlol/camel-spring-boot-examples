@@ -25,7 +25,7 @@
 	<parent>
 		<groupId>org.apache.camel.springboot</groupId>
 		<artifactId>spring-boot</artifactId>
-		<version>4.10.3.redhat-00003</version>
+		<version>4.10.3.redhat-00004</version>
 	</parent>
 
 	<groupId>org.apache.camel.springboot.example</groupId>
@@ -101,25 +101,6 @@
 		<module>xml-import</module>
 	</modules>
 
-	<properties>
-		<camel-spring-boot-version>4.10.3.redhat-00003</camel-spring-boot-version>
-		<maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
-		<skip.starting.camel.context>false</skip.starting.camel.context>
-		<javax.servlet.api.version>4.0.1</javax.servlet.api.version>
-		<jkube-maven-plugin-version>1.18.1.redhat-00002</jkube-maven-plugin-version>
-		<jkube.generator.from>registry.access.redhat.com/ubi9/openjdk-17:1.21</jkube.generator.from>
-		<jkube.build.switchToDeployment>true</jkube.build.switchToDeployment>
-		<kafka-avro-serializer-version>5.2.2</kafka-avro-serializer-version>
-		<reactor-version>3.2.22.RELEASE</reactor-version>
-		<testcontainers-version>1.19.8</testcontainers-version>
-		<hapi-structures-v24-version>2.3</hapi-structures-v24-version>
-		<lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
-		<docker-maven-plugin.version>0.45.1</docker-maven-plugin.version>
-		<testcontainers-keycloak.version>3.6.0</testcontainers-keycloak.version>
-		<json-unit-assertj.version>4.1.0</json-unit-assertj.version>
-		<lombok.version>1.18.36</lombok.version>
-	</properties>
-
 	<repositories>
 		<repository>
 			<id>apache.snapshots</id>
@@ -145,29 +126,6 @@
 			</releases>
 		</pluginRepository>
 	</pluginRepositories>
-
-	<dependencyManagement>
-		<dependencies>
-			<!--
-			  CAMEL-13084 Fix the spring-boot examples start up error by overriding servlet API version from camel-parent
-			  We need to clean it up once camel-parent upgrade the servlet api version.
-			-->
-			<dependency>
-				<groupId>javax.servlet</groupId>
-				<artifactId>javax.servlet-api</artifactId>
-				<version>${javax.servlet.api.version}</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
-	<dependencies>
-		<dependency>
-			<groupId>org.apache.camel.springboot</groupId>
-			<artifactId>spring-boot</artifactId>
-			<version>${camel-spring-boot-version}</version>
-			<type>pom</type>
-		</dependency>
-	</dependencies>
 
 	<build>
 		<plugins>
@@ -221,6 +179,126 @@
 					</systemPropertyVariables>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+        		<artifactId>exec-maven-plugin</artifactId>
+        		<version>3.5.0</version>
+				<executions>
+					<execution>
+						<id>update-properties</id>
+						<phase>pre-clean</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>mvn</executable>
+							<arguments>
+								<argument>versions:update-property</argument>
+								<argument>-Dproperty=hapi-version,guava-version,exec-maven-plugin-version,jolokia-version,metrics-version,lombok-mapstruct-binding.version,mapstruct-version,activemq-version,testcontainers-version,javafaker-version,apicurio-version,avro.maven.plugin-version,prometheus-version,reactor-version,build-helper-maven-plugin-version,maven-resources-plugin-version,awaitility-version</argument>
+								<argument>-DgenerateBackupPoms=false</argument>
+								<argument>-Dmaven.version.ignore=(?i).*-(alpha|beta|m|rc)([-.]?\d+)?</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>update-camel</id>
+						<phase>pre-clean</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>mvn</executable>
+							<arguments>
+								<argument>versions:set-property</argument>
+								<argument>-Dproperty=camel-version</argument>
+								<argument>-DnewVersion=${camel-version}</argument>
+								<argument>-DgenerateBackupPoms=false</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>update-camel-spring-boot</id>
+						<phase>pre-clean</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>mvn</executable>
+							<arguments>
+								<argument>versions:set-property</argument>
+								<argument>-Dproperty=camel-spring-boot-version</argument>
+								<argument>-DnewVersion=${project.parent.version}</argument>
+								<argument>-DgenerateBackupPoms=false</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>update-spring-boot</id>
+						<phase>pre-clean</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>mvn</executable>
+							<arguments>
+								<argument>versions:set-property</argument>
+								<argument>-Dproperty=spring-boot-version</argument>
+								<argument>-DnewVersion=${spring-boot-version}</argument>
+								<argument>-DgenerateBackupPoms=false</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>update-cxf</id>
+						<phase>pre-clean</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>mvn</executable>
+							<arguments>
+								<argument>versions:set-property</argument>
+								<argument>-Dproperty=cxf-version</argument>
+								<argument>-DnewVersion=${cxf-version}</argument>
+								<argument>-DgenerateBackupPoms=false</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>update-camel-community</id>
+						<phase>pre-clean</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>mvn</executable>
+							<arguments>
+								<argument>versions:set-property</argument>
+								<argument>-Dproperty=camel-community-version</argument>
+								<argument>-DnewVersion=${camel-community-version}</argument>
+								<argument>-DgenerateBackupPoms=false</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>update-jkube</id>
+						<phase>pre-clean</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>mvn</executable>
+							<arguments>
+								<argument>versions:set-property</argument>
+								<argument>-Dproperty=jkube-maven-plugin-version</argument>
+								<argument>-DnewVersion=${openshift-maven-plugin-version}</argument>
+								<argument>-DgenerateBackupPoms=false</argument>
+								<argument>-DprofileId=openshift</argument>
+							</arguments>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 		<pluginManagement>
 			<plugins>
@@ -231,7 +309,6 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
-
 	</build>
 
 	<profiles>
