@@ -31,9 +31,9 @@
 		<category>CXF</category>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<camel-spring-boot-version>4.10.3.redhat-00003</camel-spring-boot-version>
+		<camel-spring-boot-version>4.10.3.redhat-00004</camel-spring-boot-version>
         <spring-boot-version>3.4.4</spring-boot-version>
-		<awaitility-version>4.3.0</awaitility-version>
+		<awaitility-version>4.3.0.redhat-00001</awaitility-version>
 		<cxf-version>4.1.1.rbac-redhat-00005</cxf-version>
 	</properties>
 
