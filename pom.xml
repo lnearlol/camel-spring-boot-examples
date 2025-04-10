@@ -25,7 +25,7 @@
 	<parent>
 		<groupId>org.apache.camel.springboot</groupId>
 		<artifactId>spring-boot</artifactId>
-		<version>4.10.3.redhat-00003</version>
+		<version>4.10.3.redhat-00004</version>
 	</parent>
 
 	<groupId>org.apache.camel.springboot.example</groupId>
@@ -179,6 +179,126 @@
 					</systemPropertyVariables>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+        		<artifactId>exec-maven-plugin</artifactId>
+        		<version>3.5.0</version>
+				<executions>
+					<execution>
+						<id>update-properties</id>
+						<phase>pre-clean</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>mvn</executable>
+							<arguments>
+								<argument>versions:update-property</argument>
+								<argument>-Dproperty=hapi-version,guava-version,exec-maven-plugin-version,jolokia-version,metrics-version,lombok-mapstruct-binding.version,mapstruct-version,activemq-version,testcontainers-version,javafaker-version,apicurio-version,avro.maven.plugin-version,prometheus-version,reactor-version,build-helper-maven-plugin-version,maven-resources-plugin-version,awaitility-version</argument>
+								<argument>-DgenerateBackupPoms=false</argument>
+								<argument>-Dmaven.version.ignore=(?i).*-(alpha|beta|m|rc)([-.]?\d+)?</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>update-camel</id>
+						<phase>pre-clean</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>mvn</executable>
+							<arguments>
+								<argument>versions:set-property</argument>
+								<argument>-Dproperty=camel-version</argument>
+								<argument>-DnewVersion=${camel-version}</argument>
+								<argument>-DgenerateBackupPoms=false</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>update-camel-spring-boot</id>
+						<phase>pre-clean</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>mvn</executable>
+							<arguments>
+								<argument>versions:set-property</argument>
+								<argument>-Dproperty=camel-spring-boot-version</argument>
+								<argument>-DnewVersion=${project.parent.version}</argument>
+								<argument>-DgenerateBackupPoms=false</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>update-spring-boot</id>
+						<phase>pre-clean</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>mvn</executable>
+							<arguments>
+								<argument>versions:set-property</argument>
+								<argument>-Dproperty=spring-boot-version</argument>
+								<argument>-DnewVersion=${spring-boot-version}</argument>
+								<argument>-DgenerateBackupPoms=false</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>update-cxf</id>
+						<phase>pre-clean</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>mvn</executable>
+							<arguments>
+								<argument>versions:set-property</argument>
+								<argument>-Dproperty=cxf-version</argument>
+								<argument>-DnewVersion=${cxf-version}</argument>
+								<argument>-DgenerateBackupPoms=false</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>update-camel-community</id>
+						<phase>pre-clean</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>mvn</executable>
+							<arguments>
+								<argument>versions:set-property</argument>
+								<argument>-Dproperty=camel-community-version</argument>
+								<argument>-DnewVersion=${camel-community-version}</argument>
+								<argument>-DgenerateBackupPoms=false</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>update-jkube</id>
+						<phase>pre-clean</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>mvn</executable>
+							<arguments>
+								<argument>versions:set-property</argument>
+								<argument>-Dproperty=jkube-maven-plugin-version</argument>
+								<argument>-DnewVersion=${openshift-maven-plugin-version}</argument>
+								<argument>-DgenerateBackupPoms=false</argument>
+								<argument>-DprofileId=openshift</argument>
+							</arguments>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 		<pluginManagement>
 			<plugins>
@@ -189,7 +309,6 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
-
 	</build>
 
 	<profiles>
