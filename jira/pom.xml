@@ -20,12 +20,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-		<groupId>org.apache.camel.springboot</groupId>
-		<artifactId>spring-boot</artifactId>
-		<version>4.10.3.redhat-00003</version>
-	</parent>
-
     <artifactId>camel-example-spring-boot-jira</artifactId>
     <groupId>org.apache.camel.springboot.example</groupId>
     <version>4.10.3-SNAPSHOT</version>    
@@ -38,8 +32,8 @@
         <category>Beginner</category>
         <camel-spring-boot-version>4.10.3.redhat-00003</camel-spring-boot-version>
         <spring-boot-version>3.4.4</spring-boot-version>
-        <!--guava-version></guava-version>
-        <exec-maven-plugin-version></exec-maven-plugin-version-->
+        <guava-version>33.4.7-jre</guava-version>
+        <exec-maven-plugin-version>3.5.0</exec-maven-plugin-version>
     </properties>
 
     <dependencyManagement>

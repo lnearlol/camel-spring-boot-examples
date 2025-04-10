@@ -21,12 +21,6 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-		<groupId>org.apache.camel.springboot</groupId>
-		<artifactId>spring-boot</artifactId>
-		<version>4.10.3.redhat-00003</version>
-	</parent>
-
     <artifactId>camel-example-spring-boot-metrics</artifactId>
     <groupId>org.apache.camel.springboot.example</groupId>
     <version>4.10.3-SNAPSHOT</version>    
@@ -39,7 +33,7 @@
         <camel-spring-boot-version>4.10.3.redhat-00003</camel-spring-boot-version>
         <spring-boot-version>3.4.4</spring-boot-version>
         <jolokia-version>2.0.1</jolokia-version>
-        <!--metrics-version-->
+        <metrics-version>4.2.30</metrics-version>
     </properties>
 
     <dependencyManagement>
