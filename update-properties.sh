@@ -56,7 +56,7 @@ if [ -z "$CAMEL_VERSION" ]; then
 fi
 
 if [ -z "$CXF_VERSION" ]; then
-  read -p "Enter the CXF version (ex. 4.1.1.rbac-redhat-00001): " CXF_VERSION
+  read -p "Enter the CXF version (ex. 4.1.1.rhbac-redhat-00006): " CXF_VERSION
 fi
 
 if [ -z "$CAMEL_COMMUNITY_VERSION" ]; then
