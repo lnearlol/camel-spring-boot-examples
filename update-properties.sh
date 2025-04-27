@@ -44,7 +44,7 @@ done
 
 # Prompt for any missing values
 if [ -z "$SB_VERSION" ]; then
-  read -p "Enter the Spring Boot version (ex. 3.4.4): " SB_VERSION
+  read -p "Enter the Spring Boot version (ex. 3.4.5): " SB_VERSION
 fi
 
 if [ -z "$CSB_VERSION" ]; then

@@ -28,9 +28,9 @@
 
     <properties>
         <category>Cloud</category>
-        <camel-spring-boot-version>4.10.3.redhat-00008</camel-spring-boot-version>
-        <spring-boot-version>3.4.4</spring-boot-version>
-        <testcontainers-version>1.20.6</testcontainers-version>
+        <camel-spring-boot-version>4.10.3.redhat-00010</camel-spring-boot-version>
+        <spring-boot-version>3.4.5</spring-boot-version>
+        <testcontainers-version>1.21.0</testcontainers-version>
     </properties>
 
     <!-- Spring-Boot and Camel BOM -->
