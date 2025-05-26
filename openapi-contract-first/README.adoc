@@ -56,6 +56,30 @@ To see which Rest APIs that are available in the running Camel application, you 
 
     $camel get platform-http
 
+=== How to run on Openshift
+
+Create your own project
+
+    oc new-project csb-example-openapi
+
+So you can deploy and run with the command
+
+    mvn clean package -Popenshift
+
+You can call the Rest APIs such as
+
+----
+export ROUTE=$(oc get route camel-example-spring-boot-openapi-contract-first --output jsonpath={.spec.host})
+curl http://${ROUTE}/api/v3/pet/123
+----
+
+Which returns information about a pet.
+
+You can also update an existing PET such:
+
+----
+curl -XPUT -H "Content-Type: application/json" --data "@daisy.json" http://${ROUTE}/api/v3/pet
+----
 
 === Help and contributions
 
