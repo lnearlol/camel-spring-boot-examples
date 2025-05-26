@@ -86,7 +86,7 @@ public class BasicCamelToReactorExample {
                     .to("reactive-streams:numbers");
 
             // Generating strings every 4.9 seconds and forwarding to the stream "strings"
-            from("timer:clock2?period=4900&delay=2000&&includeMetadata=true")
+            from("timer:clock2?period=4900&delay=2000&includeMetadata=true")
                     .setBody().simple("Hello World ${header.CamelTimerCounter}!")
                     .to("reactive-streams:strings");
 
