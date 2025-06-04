@@ -95,6 +95,22 @@ The service should return a SOAP response similar to this:
 
 *Note:* The `WebServiceConfig.java` enables CXF's logging feature, so you will see the incoming SOAP request and outgoing response logged to the console when the application is running and the service is invoked.
 
+=== Camel Route Invocation
+
+In addition to external requests via `curl`, the same SOAP service is also invoked **internally**, using the `camel-cxf-soap-starter` dependency.
+
+A Camel route (defined in `CamelRoute.java`) acts as a SOAP client and sends a test request to the same endpoint:
+
+[source,java]
+----
+from("timer://sayHelloTimer?repeatCount=1&delay=2000")
+                .setHeader(CxfConstants.OPERATION_NAME, constant("sayHello"))
+                .setBody(constant("Roman"))
+                .to("cxf://{{cxf.endpoint}}/service/hello"
+                        + "?serviceClass=org.apache.camel.springboot.example.Hello");
+----
+*Note:* You should see the internal call logged as well when the application starts, demonstrating that the SOAP service can be invoked both externally and internally.
+
 == Testing
 
 The project includes both unit and integration tests.
