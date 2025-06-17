@@ -1,0 +1,38 @@
+spec:
+  template:
+    spec:
+      volumes:
+        - name: config
+          configMap:
+            name: @project.artifactId@
+            items:
+              - key: application.properties
+                path: application.properties
+              - key: patients.csv
+                path: patients.csv
+        - name: backup
+          persistentVolumeClaim:
+            claimName: @project.artifactId@
+      containers:
+        - livenessProbe:
+            httpGet:
+              path: /actuator/health/liveness
+              port: 8080
+              scheme: HTTP
+            initialDelaySeconds: 180
+          readinessProbe:
+            httpGet:
+              path: /actuator/health/readiness
+              port: 8080
+              scheme: HTTP
+            initialDelaySeconds: 10
+          volumeMounts:
+            - name: config
+              mountPath: /deployments/config/application.properties
+              subPath: application.properties
+            - name: backup
+              mountPath: /deployments/target/work/fhir/input/.camel/patients.csv
+            - name: config
+              mountPath: /deployments/target/work/fhir/input/patients.csv
+              subPath: patients.csv
+      terminationGracePeriodSeconds: 60 # default is 30
