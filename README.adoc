@@ -83,8 +83,6 @@ Number of Examples: 66 (0 deprecated)
 
 | link:infinispan/README.adoc[Infinispan] (infinispan) | Cloud | An example showing the Camel Infinispan component with Spring Boot
 
-| link:servicecall/README.adoc[Spring Boot ServiceCall] (servicecall) | Cloud | An example showing how to work with Camel ServiceCall EIP and Spring Boot
-
 | link:master/README.adoc[Master] (master) | Clustering | An example showing how to work with Camel's Master component and Spring Boot
 
 | link:rest-cxf-opentelemetry/README.adoc[Rest Cxf Opentelemetry] (rest-cxf-opentelemetry) | CXF | An example showing Camel REST using CXF and OpenTelemetry with Spring Boot
