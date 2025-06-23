@@ -22,7 +22,12 @@ import java.util.List;
 import org.apache.camel.LoggingLevel;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.http.ProtocolException;
+
+import org.hl7.fhir.dstu3.model.Bundle;
+import org.hl7.fhir.dstu3.model.Identifier;
 import org.hl7.fhir.dstu3.model.Patient;
+import org.hl7.fhir.dstu3.model.Resource;
+import org.hl7.fhir.instance.model.api.IBaseResource;
 import org.springframework.stereotype.Component;
 
 /**
@@ -43,7 +48,12 @@ public class MyCamelRouter extends RouteBuilder {
             .log("Converting ${file:name}")
             .unmarshal().csv()
             .process(exchange -> {
-                List<Patient> bundle = new ArrayList<>();
+
+                Bundle bundleTest = new Bundle();
+                bundleTest.setId("bundle-simplified-001");
+                bundleTest.setIdentifier(new Identifier().setValue("001"));
+                bundleTest.setType(org.hl7.fhir.dstu3.model.Bundle.BundleType.TRANSACTION);
+
                 @SuppressWarnings("unchecked")
                 List<List<String>> patients = (List<List<String>>) exchange.getIn().getBody();
                 for (List<String> patient: patients) {
@@ -51,12 +61,12 @@ public class MyCamelRouter extends RouteBuilder {
                     fhirPatient.setId(patient.get(0));
                     fhirPatient.addName().addGiven(patient.get(1));
                     fhirPatient.getNameFirstRep().setFamily(patient.get(2));
-                    bundle.add(fhirPatient);
+                    bundleTest.addEntry().setResource(fhirPatient).getRequest().setMethod(Bundle.HTTPVerb.POST);
                 }
-                exchange.getIn().setBody(bundle);
+                exchange.getIn().setBody(bundleTest);
             })
             // create Patient in our FHIR server
-            .to("fhir://transaction/withResources?inBody=resources&serverUrl={{serverUrl}}&username={{serverUser}}&password={{serverPassword}}&fhirVersion={{fhirVersion}}")
+            .to("fhir://transaction/withBundle?inBody=bundle&serverUrl={{serverUrl}}&username={{serverUser}}&password={{serverPassword}}&fhirVersion={{fhirVersion}}")
             // log the outcome
             .log("Patients created successfully: ${body}");
     }

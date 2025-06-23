@@ -46,6 +46,115 @@ located in the `src/main/data` folder into it. You should see the following outp
 
 The Camel application can be stopped pressing kbd:[Ctrl+c] in the shell.
 
+=== Run on Openshift
+
+Let create a service account first with all required permissions, first:
+
+```
+oc new-project fhir-test
+oc create sa fhir-sa
+oc adm policy add-scc-to-user privileged -z fhir-sa -n fhitr-test
+```
+
+Deploy a fhir server through this Deployment resource:
+
+```
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: fhir
+  namespace: fhir-test
+  labels:
+    app: fhir
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fhir
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: fhir
+    spec:
+      containers:
+        - resources: {}
+          readinessProbe:
+            exec:
+              command:
+                - bash
+                - "-c"
+                - |
+                  curl http://localhost:8080/hapi-fhir-jpaserver-example/baseDtu3/metadata --header "Authorization: Basic YWRtaW46QWRtaW4xMjMK"
+            initialDelaySeconds: 60
+            timeoutSeconds: 5
+            periodSeconds: 10
+            successThreshold: 1
+            failureThreshold: 10
+          terminationMessagePath: /dev/termination-log
+          name: fhir
+          livenessProbe:
+            exec:
+              command:
+                - bash
+                - "-c"
+                - |
+                  curl http://localhost:8080/hapi-fhir-jpaserver-example/baseDtu3/metadata --header "Authorization: Basic YWRtaW46QWRtaW4xMjMK"
+            initialDelaySeconds: 60
+            timeoutSeconds: 5
+            periodSeconds: 10
+            successThreshold: 1
+            failureThreshold: 10
+          env:
+            - name: DISABLE_AUTH
+              value: 'false'
+            - name: FHIR_USER
+              value: admin
+            - name: FHIR_PWD
+              value: Admin123
+            - name: hapi.fhir.fhir_version
+              value: DSTU3
+          securityContext:
+            privileged: true
+          serviceAccountName: fhir-sa
+          ports:
+            - name: fhir
+              containerPort: 8080
+              protocol: TCP
+          imagePullPolicy: IfNotPresent
+          terminationMessagePolicy: File
+          image: 'quay.io/fuse_qe/hapi-fhir-auth:v3.0.1'
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+      securityContext:
+        runAsUser: 100
+      serviceAccountName: fhir-sa
+      schedulerName: default-scheduler
+  strategy:
+    type: RollingUpdate
+```
+
+Replace keys in src/main/jkube/configmap.yaml with desired content in application.properties and patients.csv file.
+
+```
+    data:
+      application.properties: |
+        key1=value1
+        key2=value2
+        key3=value3
+      patients.csv: |
+        1a,Name1,SureName1
+        2a,Name2,SureName2
+
+```
+
+You can run this example using:
+
+```sh
+$ mvn clean install -Popenshift -DskipTests
+```
+
 === To get health check
 
 To show a summary of spring boot health check
