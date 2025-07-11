@@ -48,11 +48,11 @@ if [ -z "$SB_VERSION" ]; then
 fi
 
 if [ -z "$CSB_VERSION" ]; then
-  read -p "Enter the Camel Spring Boot version (ex. 4.10.3.redhat-00001): " CSB_VERSION
+  read -p "Enter the Camel Spring Boot version (ex. 4.10.6.redhat-00001): " CSB_VERSION
 fi
 
 if [ -z "$CAMEL_VERSION" ]; then
-  read -p "Enter the Camel version (ex. 4.10.3.redhat-00001): " CAMEL_VERSION
+  read -p "Enter the Camel version (ex. 4.10.6.redhat-00001): " CAMEL_VERSION
 fi
 
 if [ -z "$CXF_VERSION" ]; then
@@ -60,7 +60,7 @@ if [ -z "$CXF_VERSION" ]; then
 fi
 
 if [ -z "$CAMEL_COMMUNITY_VERSION" ]; then
-  read -p "Enter the Camel Community version (ex. 4.10.3): " CAMEL_COMMUNITY_VERSION
+  read -p "Enter the Camel Community version (ex. 4.10.6): " CAMEL_COMMUNITY_VERSION
 fi
 
 if [ -z "$JKUBE_VERSION" ]; then
