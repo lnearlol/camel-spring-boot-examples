@@ -64,7 +64,7 @@ _src/main/resources/application.properties_
 
     # increase graceful shutdown timeout to 60 seconds (default is 45)
     camel.main.shutdown-timeout = 60 # (default is 45)
-    camel.springboot.shutdown-timeout = 60
+    camel.main.shutdown-timeout = 60
 
     # monitoring the DefaultShutdownStrategy behaviour
     logging.level.org.apache.camel.impl.engine.DefaultShutdownStrategy = DEBUG
